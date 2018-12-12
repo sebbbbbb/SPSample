@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kok-dg-pN9">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SPSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Directory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Trf-Zi-L22">
+                                <rect key="frame" x="20" y="84" width="71" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzV-4F-SPJ">
+                                <rect key="frame" x="20" y="125" width="335" height="30"/>
+                                <state key="normal" title="GO"/>
+                                <connections>
+                                    <segue destination="ZoF-iq-4uo" kind="show" id="MZe-Ty-jv0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rzV-4F-SPJ" firstAttribute="top" secondItem="Trf-Zi-L22" secondAttribute="bottom" constant="20" id="6PP-Wo-WiX"/>
+                            <constraint firstItem="Trf-Zi-L22" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Pc7-RI-2qL"/>
+                            <constraint firstItem="rzV-4F-SPJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aJ2-Gg-AyJ"/>
+                            <constraint firstItem="Trf-Zi-L22" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="pld-Bm-YIK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rzV-4F-SPJ" secondAttribute="trailing" constant="20" id="w2f-Fv-mdq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qBZ-Ps-IOh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="133.5832083958021"/>
+        </scene>
+        <!--File Manager View Controller-->
+        <scene sceneID="eUp-lj-2RH">
+            <objects>
+                <viewController id="ZoF-iq-4uo" customClass="FileManagerViewController" customModule="SPSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="abz-qz-vKY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRF-I4-sRm">
+                                <rect key="frame" x="20" y="164" width="335" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteFiles" destination="ZoF-iq-4uo" eventType="touchUpInside" id="2PY-tm-7w5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3T-yE-dVA">
+                                <rect key="frame" x="20" y="119" width="335" height="30"/>
+                                <state key="normal" title="Listing"/>
+                                <connections>
+                                    <action selector="listFiles" destination="ZoF-iq-4uo" eventType="touchUpInside" id="k1k-2D-QTH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlu-Pv-jOI">
+                                <rect key="frame" x="20" y="74" width="335" height="30"/>
+                                <state key="normal" title="Créer"/>
+                                <connections>
+                                    <action selector="createFiles" destination="ZoF-iq-4uo" eventType="touchUpInside" id="c6n-qn-H44"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="t3T-yE-dVA" firstAttribute="trailing" secondItem="mlu-Pv-jOI" secondAttribute="trailing" id="CKM-Xm-HnR"/>
+                            <constraint firstItem="mlu-Pv-jOI" firstAttribute="leading" secondItem="Yla-lf-152" secondAttribute="leading" constant="20" id="Cag-8n-td0"/>
+                            <constraint firstItem="Yla-lf-152" firstAttribute="trailing" secondItem="mlu-Pv-jOI" secondAttribute="trailing" constant="20" id="KYD-jj-SJo"/>
+                            <constraint firstItem="mlu-Pv-jOI" firstAttribute="top" secondItem="Yla-lf-152" secondAttribute="top" constant="10" id="NFO-mf-tnU"/>
+                            <constraint firstItem="PRF-I4-sRm" firstAttribute="trailing" secondItem="mlu-Pv-jOI" secondAttribute="trailing" id="des-Oy-HWk"/>
+                            <constraint firstItem="PRF-I4-sRm" firstAttribute="leading" secondItem="mlu-Pv-jOI" secondAttribute="leading" id="eOa-ux-GVz"/>
+                            <constraint firstItem="t3T-yE-dVA" firstAttribute="leading" secondItem="mlu-Pv-jOI" secondAttribute="leading" id="iBJ-tc-NTS"/>
+                            <constraint firstItem="PRF-I4-sRm" firstAttribute="top" secondItem="t3T-yE-dVA" secondAttribute="bottom" constant="15" id="pAr-g3-El4"/>
+                            <constraint firstItem="t3T-yE-dVA" firstAttribute="top" secondItem="mlu-Pv-jOI" secondAttribute="bottom" constant="15" id="s41-Au-hs9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Yla-lf-152"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bpi-S7-I1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.79999999999995" y="-197.45127436281859"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Nkc-ac-Lwh">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m9K-xA-7zM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="kok-dg-pN9" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="017-dq-VeZ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="GXT-Nj-zkc"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-610" y="134"/>
+        </scene>
+    </scenes>
+</document>
