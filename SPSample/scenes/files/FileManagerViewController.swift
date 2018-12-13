@@ -40,6 +40,8 @@ class FileManagerViewController: UIViewController {
     
     @IBAction func deleteFiles() {
         
+        
+        
     }
     
     
