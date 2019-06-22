@@ -1,0 +1,7 @@
+# Xcode
+.DS_STORE
+.gitmodules
+build/*
+Pods/
+*.xcworkspace
+DerivedData
