@@ -1,0 +1,20 @@
+PODS:
+  - Reusable (4.0.5):
+    - Reusable/Storyboard (= 4.0.5)
+    - Reusable/View (= 4.0.5)
+  - Reusable/Storyboard (4.0.5)
+  - Reusable/View (4.0.5)
+
+DEPENDENCIES:
+  - Reusable
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Reusable
+
+SPEC CHECKSUMS:
+  Reusable: 188be1a54ac0691bc66e5bb24ec6eb91971b315b
+
+PODFILE CHECKSUM: b853e29ab6a9fd2734f6ad621e8b480a6c9fa35f
+
+COCOAPODS: 1.5.3
