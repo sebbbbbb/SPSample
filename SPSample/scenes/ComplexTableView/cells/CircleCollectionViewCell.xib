@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="iOS 13.0 system colors" minToolsVersion="11.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Bmr-Dn-R00" customClass="CircleCollectionViewCell" customModule="SPSample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nWb-gc-nKf">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DVb-CP-w43">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="systemTealColor"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="DVb-CP-w43" firstAttribute="leading" secondItem="nWb-gc-nKf" secondAttribute="leading" id="1qE-ma-xIJ"/>
+                    <constraint firstItem="DVb-CP-w43" firstAttribute="top" secondItem="nWb-gc-nKf" secondAttribute="top" id="5TC-ru-jFc"/>
+                    <constraint firstAttribute="bottom" secondItem="DVb-CP-w43" secondAttribute="bottom" id="OLV-ia-YUU"/>
+                    <constraint firstAttribute="trailing" secondItem="DVb-CP-w43" secondAttribute="trailing" id="fJv-AP-tVp"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <point key="canvasLocation" x="25" y="48"/>
+        </collectionViewCell>
+    </objects>
+</document>

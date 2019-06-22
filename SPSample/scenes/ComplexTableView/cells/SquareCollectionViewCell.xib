@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="aZ7-fp-bVP" customClass="SquareCollectionViewCell" customModule="SPSample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hzq-JS-k1j">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kjf-FI-Uiv">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Kjf-FI-Uiv" secondAttribute="height" multiplier="1:1" id="bKM-ll-Nz1"/>
+                            <constraint firstAttribute="height" priority="999" constant="100" id="qJT-45-m53"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Kjf-FI-Uiv" secondAttribute="bottom" id="C6x-9W-d60"/>
+                    <constraint firstItem="Kjf-FI-Uiv" firstAttribute="top" secondItem="hzq-JS-k1j" secondAttribute="top" id="GRV-MX-SRa"/>
+                    <constraint firstAttribute="trailing" secondItem="Kjf-FI-Uiv" secondAttribute="trailing" id="Khe-zs-xk0"/>
+                    <constraint firstItem="Kjf-FI-Uiv" firstAttribute="leading" secondItem="hzq-JS-k1j" secondAttribute="leading" id="VvY-ZA-Qa9"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <connections>
+                <outlet property="bgView" destination="Kjf-FI-Uiv" id="pgP-1d-WTL"/>
+            </connections>
+            <point key="canvasLocation" x="82.608695652173921" y="77.678571428571431"/>
+        </collectionViewCell>
+    </objects>
+</document>
