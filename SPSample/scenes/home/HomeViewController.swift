@@ -12,7 +12,10 @@ class HomeViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
   
-  let viewModel = [HomeItemViewModel(name: "ComplexTableView", type: ComplexTableViewViewController.self)]
+  let viewModel = [
+    HomeItemViewModel(name: "ComplexTableView", type: ComplexTableViewViewController.self),
+    HomeItemViewModel(name: "Layer", type: LayerViewController.self)
+  ]
   
   init() {
     super.init(nibName: nil, bundle: nil)

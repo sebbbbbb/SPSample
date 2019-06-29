@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="iOS 13.0 system colors" minToolsVersion="11.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LayerViewController" customModule="SPSample" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewRounded" destination="mgm-H9-SQd" id="Brx-sF-t3p"/>
+                <outlet property="viewWithBoth" destination="Z8G-iA-tk9" id="Lg7-Pe-h7M"/>
+                <outlet property="viewWithShadowLayer" destination="PLC-P5-Q7C" id="wJT-Qu-HTB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mgm-H9-SQd">
+                    <rect key="frame" x="48" y="76" width="318" height="169.5"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="systemTealColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="mgm-H9-SQd" secondAttribute="height" multiplier="15:8" id="AXV-kz-rcA"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z8G-iA-tk9">
+                    <rect key="frame" x="48" y="447" width="318" height="170"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Z8G-iA-tk9" secondAttribute="height" multiplier="15:8" id="j39-3v-MJu"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PLC-P5-Q7C">
+                    <rect key="frame" x="48" y="261.5" width="318" height="169.5"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="PLC-P5-Q7C" secondAttribute="height" multiplier="15:8" id="nL8-Kw-yPv"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mgm-H9-SQd" secondAttribute="trailing" constant="48" id="1BW-ci-dIn"/>
+                <constraint firstItem="Z8G-iA-tk9" firstAttribute="width" secondItem="mgm-H9-SQd" secondAttribute="width" id="4R9-bm-DTi"/>
+                <constraint firstItem="PLC-P5-Q7C" firstAttribute="top" secondItem="mgm-H9-SQd" secondAttribute="bottom" constant="16" id="5Ex-Wp-e69"/>
+                <constraint firstItem="Z8G-iA-tk9" firstAttribute="top" secondItem="PLC-P5-Q7C" secondAttribute="bottom" constant="16" id="8cI-Mu-dch"/>
+                <constraint firstItem="Z8G-iA-tk9" firstAttribute="trailing" secondItem="mgm-H9-SQd" secondAttribute="trailing" id="BhZ-QR-cx9"/>
+                <constraint firstItem="PLC-P5-Q7C" firstAttribute="trailing" secondItem="mgm-H9-SQd" secondAttribute="trailing" id="EpY-ro-meI"/>
+                <constraint firstItem="PLC-P5-Q7C" firstAttribute="leading" secondItem="mgm-H9-SQd" secondAttribute="leading" id="O9f-io-7vK"/>
+                <constraint firstItem="PLC-P5-Q7C" firstAttribute="top" secondItem="mgm-H9-SQd" secondAttribute="bottom" constant="16" id="V5n-tI-uwU"/>
+                <constraint firstItem="mgm-H9-SQd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="32" id="ZjR-GY-ai2"/>
+                <constraint firstItem="mgm-H9-SQd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="48" id="faA-05-wAd"/>
+                <constraint firstItem="PLC-P5-Q7C" firstAttribute="width" secondItem="mgm-H9-SQd" secondAttribute="width" id="g4u-Oc-uwM"/>
+                <constraint firstItem="Z8G-iA-tk9" firstAttribute="leading" secondItem="mgm-H9-SQd" secondAttribute="leading" id="uIM-Re-3d5"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="87" y="104"/>
+        </view>
+    </objects>
+</document>
