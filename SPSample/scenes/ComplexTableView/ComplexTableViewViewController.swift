@@ -9,6 +9,8 @@
 import Reusable
 import UIKit
 
+/// Sample of a tableView with embed collectionView working with AutoSizing
+/// On complex cell this implementation doesn't seem to work at 100% and can lead to weird bug ...
 class ComplexTableViewViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
