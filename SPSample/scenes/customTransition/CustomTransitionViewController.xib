@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="iOS 13.0 system colors" minToolsVersion="11.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomTransitionViewController" customModule="SPSample" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zk9-pL-YPy">
+                    <rect key="frame" x="16" y="816" width="382" height="30"/>
+                    <state key="normal" title="Transition"/>
+                    <connections>
+                        <action selector="presentNextViewController" destination="-1" eventType="touchUpInside" id="w7R-VT-VBG"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qu3-5k-C52">
+                    <rect key="frame" x="16" y="60" width="382" height="179"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="systemGreenColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OR3-1b-b41">
+                    <rect key="frame" x="16" y="255" width="382" height="179.5"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="systemPurpleColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TCX-xL-cej">
+                    <rect key="frame" x="16" y="442.5" width="382" height="179"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="systemTealColor"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qu3-5k-C52" secondAttribute="trailing" constant="16" id="0zu-EK-fIU"/>
+                <constraint firstItem="TCX-xL-cej" firstAttribute="top" secondItem="OR3-1b-b41" secondAttribute="bottom" constant="8" id="Hqp-ve-QaC"/>
+                <constraint firstItem="TCX-xL-cej" firstAttribute="trailing" secondItem="qu3-5k-C52" secondAttribute="trailing" id="IQX-WI-Voq"/>
+                <constraint firstItem="qu3-5k-C52" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="PjA-nJ-ASU"/>
+                <constraint firstItem="OR3-1b-b41" firstAttribute="height" secondItem="qu3-5k-C52" secondAttribute="height" id="Q4P-MF-HYR"/>
+                <constraint firstItem="qu3-5k-C52" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="QtH-Or-hEl"/>
+                <constraint firstItem="qu3-5k-C52" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1:5" id="Zr9-jK-im6"/>
+                <constraint firstItem="Zk9-pL-YPy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="by7-yb-cLF"/>
+                <constraint firstItem="TCX-xL-cej" firstAttribute="height" secondItem="qu3-5k-C52" secondAttribute="height" id="cry-xc-1Tv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Zk9-pL-YPy" secondAttribute="trailing" constant="16" id="dAo-J7-xlo"/>
+                <constraint firstItem="TCX-xL-cej" firstAttribute="leading" secondItem="qu3-5k-C52" secondAttribute="leading" id="eb4-n7-RWi"/>
+                <constraint firstItem="OR3-1b-b41" firstAttribute="leading" secondItem="qu3-5k-C52" secondAttribute="leading" id="fHS-RQ-p0f"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Zk9-pL-YPy" secondAttribute="bottom" constant="16" id="mHQ-fy-mHk"/>
+                <constraint firstItem="OR3-1b-b41" firstAttribute="top" secondItem="qu3-5k-C52" secondAttribute="bottom" constant="16" id="tOD-ZI-uJB"/>
+                <constraint firstItem="OR3-1b-b41" firstAttribute="trailing" secondItem="qu3-5k-C52" secondAttribute="trailing" id="x85-nX-pao"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="111"/>
+        </view>
+    </objects>
+</document>
