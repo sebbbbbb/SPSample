@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SQLLiteViewController" customModule="SPSample" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ElS-Wd-gYg">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfg-Lg-BvV">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="102.5"/>
+                            <state key="normal" title="Generate Sample data"/>
+                            <connections>
+                                <action selector="generateSampleData" destination="-1" eventType="touchUpInside" id="3V6-8I-QJp"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WI6-Cq-qDG" userLabel="Query 1">
+                            <rect key="frame" x="0.0" y="102.5" width="414" height="102"/>
+                            <state key="normal" title="Query 1"/>
+                            <connections>
+                                <action selector="request1" destination="-1" eventType="touchUpInside" id="TLQ-8P-d0g"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6G-4v-wB8" userLabel="Query 2">
+                            <rect key="frame" x="0.0" y="204.5" width="414" height="102.5"/>
+                            <state key="normal" title="Query 2"/>
+                            <connections>
+                                <action selector="request2" destination="-1" eventType="touchUpInside" id="d8O-aX-IjK"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Nf-nK-2vG" userLabel="Query 3">
+                            <rect key="frame" x="0.0" y="307" width="414" height="102"/>
+                            <state key="normal" title="Query 3"/>
+                            <connections>
+                                <action selector="request3" destination="-1" eventType="touchUpInside" id="kom-R6-CjN"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scb-MS-Fra" userLabel="Query 4">
+                            <rect key="frame" x="0.0" y="409" width="414" height="102.5"/>
+                            <state key="normal" title="Query 4"/>
+                            <connections>
+                                <action selector="request4" destination="-1" eventType="touchUpInside" id="jRj-ef-QAG"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzd-Wl-eb4" userLabel="Dump">
+                            <rect key="frame" x="0.0" y="511.5" width="414" height="102"/>
+                            <state key="normal" title="Dump"/>
+                            <connections>
+                                <action selector="dumpData" destination="-1" eventType="touchUpInside" id="DCm-8z-uFC"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rgg-5L-IeW">
+                            <rect key="frame" x="0.0" y="613.5" width="414" height="102.5"/>
+                            <state key="normal" title="Perform Request"/>
+                            <connections>
+                                <action selector="performRequest" destination="-1" eventType="touchUpInside" id="dJy-4O-aKA"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbB-VU-mGy" userLabel="Nuke">
+                            <rect key="frame" x="0.0" y="716" width="414" height="102"/>
+                            <state key="normal" title="Nuke"/>
+                            <connections>
+                                <action selector="nukeData" destination="-1" eventType="touchUpInside" id="BzK-pd-noe"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ElS-Wd-gYg" secondAttribute="trailing" id="7eg-L5-jV8"/>
+                <constraint firstItem="ElS-Wd-gYg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="HGc-qx-yDQ"/>
+                <constraint firstItem="ElS-Wd-gYg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="N2I-hQ-Yop"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ElS-Wd-gYg" secondAttribute="bottom" id="lkM-zK-ZbV"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="151"/>
+        </view>
+    </objects>
+</document>

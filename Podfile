@@ -7,5 +7,6 @@ target 'SPSample' do
 
   # Pods for SPSample
   pod 'Reusable'
-
+  pod 'SQLite.swift', '~> 0.12.0'
+  
 end
