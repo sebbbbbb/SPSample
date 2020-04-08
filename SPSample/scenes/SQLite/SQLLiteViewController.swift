@@ -9,6 +9,19 @@
 import SQLite
 import UIKit
 
+
+
+extension Connection {
+    public var userVersion: Int32 {
+        get { return Int32(try! scalar("PRAGMA user_version") as! Int64)}
+        set { try! run("PRAGMA user_version = \(newValue)") }
+    }
+}
+
+protocol LikeDataManager {
+  
+}
+
 class SQLLiteViewController: UIViewController {
   
   var db: Connection!
@@ -49,6 +62,8 @@ class SQLLiteViewController: UIViewController {
     createTables()
     //  db.trace { print($0) }
     
+    debugPrint(db.userVersion)
+    
   }
   
   // MARK: - Actions
@@ -69,7 +84,7 @@ class SQLLiteViewController: UIViewController {
     }
     
     // Session Video
-    for i in 0...10_000 {
+    for i in 0...100_000 {
       try! db.run(sessionVideo.insert(
         sessionVideoId <- Int64(i),
         sessionVideoIdUserProgram <- Int64(Int.random(in: 0...100)),
@@ -179,12 +194,12 @@ class SQLLiteViewController: UIViewController {
     printTimeElapsedWhenRunningCode(title: #function) {
       let query = sessionVideo
         .filter(userPrograms[userProgramsIdProgram] == programID)
-       //  .filter(sessionVideo[sessionVideoIdUserProgram] == programID)
+        //  .filter(sessionVideo[sessionVideoIdUserProgram] == programID)
         .join(userPrograms, on: sessionVideoIdUserProgram == userPrograms[userProgramsIdProgram])
       
       
       for sessionVideoX in try! db.prepare(query) {
-        // debugPrint("Query --  ID2 : \(sessionVideoX[sessionVideo[sessionVideoIdUserProgram]]) ID1 : \(sessionVideoX[sessionVideo[sessionVideoId]])")
+        debugPrint("Query --  ID2 : \(sessionVideoX[sessionVideo[sessionVideoIdUserProgram]]) ID1 : \(sessionVideoX[sessionVideo[sessionVideoId]])")
       }
     }
   }
@@ -193,7 +208,7 @@ class SQLLiteViewController: UIViewController {
     printTimeElapsedWhenRunningCode(title: #function) {
       let query = sessionVideo.filter(sessionVideoIdUserProgram == programID)
       for sessionVideo in try! db.prepare(query) {
-        // debugPrint("Query  -- ID Program : \(sessionVideo[sessionVideoIdUserProgram]) ID Video : \(sessionVideo[sessionVideoIdVideoId]) Date : \(sessionVideo[sessionVideoDate]) ")
+        debugPrint("Query  -- ID Program : \(sessionVideo[sessionVideoIdUserProgram]) ID Video : \(sessionVideo[sessionVideoIdVideoId]) Date : \(sessionVideo[sessionVideoDate]) ")
       }
     }
   }
@@ -211,21 +226,19 @@ class SQLLiteViewController: UIViewController {
   }
   
   private func createAndConnectToDB() {
-    do {
-      db = try Connection(.temporary)
-    } catch {
-      debugPrint("Error : \(error)")
-    }
+    let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+    debugPrint(path)
+    db = try! Connection("\(path)/db.sqlite3")
   }
   
   private func createTables() {
     
-    try! db.run(user.create { t in
+    try! db.run(user.create(ifNotExists: true) { t in
       t.column(userId, primaryKey: true)
       t.column(userage)
     })
     
-    try! db.run(userPrograms.create { t in
+    try! db.run(userPrograms.create(ifNotExists: true) { t in
       t.column(userProgramsId, primaryKey: true)
       t.column(userProgramsLiked)
       t.column(userProgramsIdUser)
@@ -233,7 +246,7 @@ class SQLLiteViewController: UIViewController {
       t.foreignKey(userId, references: user, userId, delete: .setNull)
     })
     
-    try! db.run(sessionVideo.create { t in
+    try! db.run(sessionVideo.create(ifNotExists: true) { t in
       t.column(sessionVideoId, primaryKey: true)
       t.column(sessionVideoIdVideoId)
       t.column(sessionVideoIdUserProgram)
