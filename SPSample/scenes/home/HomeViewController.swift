@@ -17,7 +17,8 @@ class HomeViewController: UIViewController {
     HomeItemViewModel(name: "ComplexTableView2", type: ComplexTableViewController2.self),
     HomeItemViewModel(name: "Layer", type: LayerViewController.self),
     HomeItemViewModel(name: "Transition", type: CustomTransitionViewController.self),
-    HomeItemViewModel(name: "SQLite", type: SQLLiteViewController.self)
+    HomeItemViewModel(name: "SQLite", type: SQLLiteViewController.self),
+    HomeItemViewModel(name: "Circular Progress View", type: ProgressViewController.self),
   ]
   
   init() {
