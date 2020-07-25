@@ -20,6 +20,8 @@
 		167D4289230C34810077E43D /* AnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167D4288230C34810077E43D /* AnimationController.swift */; };
 		168CF9BD247BEE7500DF2627 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168CF9BB247BEE7500DF2627 /* ProgressViewController.swift */; };
 		168CF9BE247BEE7500DF2627 /* ProgressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 168CF9BC247BEE7500DF2627 /* ProgressViewController.xib */; };
+		16B0297724CC707900E99FB3 /* RotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B0297524CC707900E99FB3 /* RotationViewController.swift */; };
+		16B0297824CC707900E99FB3 /* RotationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16B0297624CC707900E99FB3 /* RotationViewController.xib */; };
 		16D42ABF243B6C0900D254E7 /* SQLLiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D42ABD243B6C0900D254E7 /* SQLLiteViewController.swift */; };
 		16D42AC0243B6C0900D254E7 /* SQLLiteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16D42ABE243B6C0900D254E7 /* SQLLiteViewController.xib */; };
 		96101D2F22C77B7700EF63FF /* LayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96101D2D22C77B7700EF63FF /* LayerViewController.swift */; };
@@ -64,6 +66,8 @@
 		167D4288230C34810077E43D /* AnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationController.swift; sourceTree = "<group>"; };
 		168CF9BB247BEE7500DF2627 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		168CF9BC247BEE7500DF2627 /* ProgressViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressViewController.xib; sourceTree = "<group>"; };
+		16B0297524CC707900E99FB3 /* RotationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationViewController.swift; sourceTree = "<group>"; };
+		16B0297624CC707900E99FB3 /* RotationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RotationViewController.xib; sourceTree = "<group>"; };
 		16D42ABD243B6C0900D254E7 /* SQLLiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLLiteViewController.swift; sourceTree = "<group>"; };
 		16D42ABE243B6C0900D254E7 /* SQLLiteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SQLLiteViewController.xib; sourceTree = "<group>"; };
 		1FA75EA19783DC8A92ED5F0C /* Pods-SPSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SPSample/Pods-SPSample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 		160BAD2321C14D7F00388B5D /* scenes */ = {
 			isa = PBXGroup;
 			children = (
+				16B0297424CC705D00E99FB3 /* rotation */,
 				168CF9BA247BEE5F00DF2627 /* progressView */,
 				16D42ABC243B6BF700D254E7 /* SQLite */,
 				167D427E230C31F00077E43D /* customTransition */,
@@ -186,6 +191,15 @@
 				168CF9BC247BEE7500DF2627 /* ProgressViewController.xib */,
 			);
 			path = progressView;
+			sourceTree = "<group>";
+		};
+		16B0297424CC705D00E99FB3 /* rotation */ = {
+			isa = PBXGroup;
+			children = (
+				16B0297524CC707900E99FB3 /* RotationViewController.swift */,
+				16B0297624CC707900E99FB3 /* RotationViewController.xib */,
+			);
+			path = rotation;
 			sourceTree = "<group>";
 		};
 		16D42ABC243B6BF700D254E7 /* SQLite */ = {
@@ -364,6 +378,7 @@
 				96D679CC22BE6B7300D7DDD3 /* SquareCollectionViewCell.xib in Resources */,
 				96D679C222BE661B00D7DDD3 /* ComplexTableViewViewController.xib in Resources */,
 				16D42AC0243B6C0900D254E7 /* SQLLiteViewController.xib in Resources */,
+				16B0297824CC707900E99FB3 /* RotationViewController.xib in Resources */,
 				96D679C522BE68F400D7DDD3 /* ContainerCell.xib in Resources */,
 				9629E14422D221CF008577BB /* ComplexTableViewController2.xib in Resources */,
 				160BAD1721C14C9E00388B5D /* Main.storyboard in Resources */,
@@ -436,6 +451,7 @@
 				9629E14C22D225B5008577BB /* MovieCollectionViewCell.swift in Sources */,
 				96101D2F22C77B7700EF63FF /* LayerViewController.swift in Sources */,
 				96D679CF22BE902900D7DDD3 /* CircleCollectionViewCell.swift in Sources */,
+				16B0297724CC707900E99FB3 /* RotationViewController.swift in Sources */,
 				96D679C122BE661B00D7DDD3 /* ComplexTableViewViewController.swift in Sources */,
 				9629E15322D22F71008577BB /* SerieCollectionViewCell.swift in Sources */,
 				9629E14322D221CF008577BB /* ComplexTableViewController2.swift in Sources */,
