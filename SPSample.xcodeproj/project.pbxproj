@@ -13,6 +13,15 @@
 		160BAD1921C14C9F00388B5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 160BAD1821C14C9F00388B5D /* Assets.xcassets */; };
 		160BAD1C21C14C9F00388B5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 160BAD1A21C14C9F00388B5D /* LaunchScreen.storyboard */; };
 		160BAD2621C14D9200388B5D /* FileManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BAD2521C14D9200388B5D /* FileManagerViewController.swift */; };
+		165647D82529CAB300A7AF0D /* CollectionViewLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165647D62529CAB300A7AF0D /* CollectionViewLayoutViewController.swift */; };
+		165647D92529CAB300A7AF0D /* CollectionViewLayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 165647D72529CAB300A7AF0D /* CollectionViewLayoutViewController.xib */; };
+		165647DD2529CB1200A7AF0D /* SquareCollectionViewCellX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165647DB2529CB1200A7AF0D /* SquareCollectionViewCellX.swift */; };
+		165647DE2529CB1200A7AF0D /* SquareCollectionViewCellX.xib in Resources */ = {isa = PBXBuildFile; fileRef = 165647DC2529CB1200A7AF0D /* SquareCollectionViewCellX.xib */; };
+		165647E12529CBF400A7AF0D /* RectangleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165647DF2529CBF400A7AF0D /* RectangleCollectionViewCell.swift */; };
+		165647E22529CBF400A7AF0D /* RectangleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 165647E02529CBF400A7AF0D /* RectangleCollectionViewCell.xib */; };
+		165647E52529CF9B00A7AF0D /* BigSquareCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165647E32529CF9B00A7AF0D /* BigSquareCollectionViewCell.swift */; };
+		165647E62529CF9B00A7AF0D /* BigSquareCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 165647E42529CF9B00A7AF0D /* BigSquareCollectionViewCell.xib */; };
+		165647E92529D0C500A7AF0D /* CustomCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165647E82529D0C500A7AF0D /* CustomCollectionLayout.swift */; };
 		167D4281230C32060077E43D /* CustomTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167D427F230C32060077E43D /* CustomTransitionViewController.swift */; };
 		167D4282230C32060077E43D /* CustomTransitionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 167D4280230C32060077E43D /* CustomTransitionViewController.xib */; };
 		167D4285230C321F0077E43D /* CustomTransitionDestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167D4283230C321F0077E43D /* CustomTransitionDestinationViewController.swift */; };
@@ -59,6 +68,15 @@
 		160BAD1B21C14C9F00388B5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		160BAD1D21C14C9F00388B5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		160BAD2521C14D9200388B5D /* FileManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerViewController.swift; sourceTree = "<group>"; };
+		165647D62529CAB300A7AF0D /* CollectionViewLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLayoutViewController.swift; sourceTree = "<group>"; };
+		165647D72529CAB300A7AF0D /* CollectionViewLayoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewLayoutViewController.xib; sourceTree = "<group>"; };
+		165647DB2529CB1200A7AF0D /* SquareCollectionViewCellX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareCollectionViewCellX.swift; sourceTree = "<group>"; };
+		165647DC2529CB1200A7AF0D /* SquareCollectionViewCellX.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SquareCollectionViewCellX.xib; sourceTree = "<group>"; };
+		165647DF2529CBF400A7AF0D /* RectangleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCollectionViewCell.swift; sourceTree = "<group>"; };
+		165647E02529CBF400A7AF0D /* RectangleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RectangleCollectionViewCell.xib; sourceTree = "<group>"; };
+		165647E32529CF9B00A7AF0D /* BigSquareCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigSquareCollectionViewCell.swift; sourceTree = "<group>"; };
+		165647E42529CF9B00A7AF0D /* BigSquareCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BigSquareCollectionViewCell.xib; sourceTree = "<group>"; };
+		165647E82529D0C500A7AF0D /* CustomCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionLayout.swift; sourceTree = "<group>"; };
 		167D427F230C32060077E43D /* CustomTransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitionViewController.swift; sourceTree = "<group>"; };
 		167D4280230C32060077E43D /* CustomTransitionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTransitionViewController.xib; sourceTree = "<group>"; };
 		167D4283230C321F0077E43D /* CustomTransitionDestinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitionDestinationViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +161,7 @@
 		160BAD2321C14D7F00388B5D /* scenes */ = {
 			isa = PBXGroup;
 			children = (
+				165647D52529CA9D00A7AF0D /* CustomCollectionViewLayout */,
 				16B0297424CC705D00E99FB3 /* rotation */,
 				168CF9BA247BEE5F00DF2627 /* progressView */,
 				16D42ABC243B6BF700D254E7 /* SQLite */,
@@ -162,6 +181,38 @@
 				160BAD2521C14D9200388B5D /* FileManagerViewController.swift */,
 			);
 			path = files;
+			sourceTree = "<group>";
+		};
+		165647D52529CA9D00A7AF0D /* CustomCollectionViewLayout */ = {
+			isa = PBXGroup;
+			children = (
+				165647E72529D06D00A7AF0D /* layout */,
+				165647DA2529CAFF00A7AF0D /* cell */,
+				165647D62529CAB300A7AF0D /* CollectionViewLayoutViewController.swift */,
+				165647D72529CAB300A7AF0D /* CollectionViewLayoutViewController.xib */,
+			);
+			path = CustomCollectionViewLayout;
+			sourceTree = "<group>";
+		};
+		165647DA2529CAFF00A7AF0D /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				165647DB2529CB1200A7AF0D /* SquareCollectionViewCellX.swift */,
+				165647DC2529CB1200A7AF0D /* SquareCollectionViewCellX.xib */,
+				165647DF2529CBF400A7AF0D /* RectangleCollectionViewCell.swift */,
+				165647E02529CBF400A7AF0D /* RectangleCollectionViewCell.xib */,
+				165647E32529CF9B00A7AF0D /* BigSquareCollectionViewCell.swift */,
+				165647E42529CF9B00A7AF0D /* BigSquareCollectionViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		165647E72529D06D00A7AF0D /* layout */ = {
+			isa = PBXGroup;
+			children = (
+				165647E82529D0C500A7AF0D /* CustomCollectionLayout.swift */,
+			);
+			path = layout;
 			sourceTree = "<group>";
 		};
 		167D427E230C31F00077E43D /* customTransition */ = {
@@ -375,19 +426,23 @@
 				160BAD1921C14C9F00388B5D /* Assets.xcassets in Resources */,
 				9629E15422D22F71008577BB /* SerieCollectionViewCell.xib in Resources */,
 				167D4282230C32060077E43D /* CustomTransitionViewController.xib in Resources */,
+				165647DE2529CB1200A7AF0D /* SquareCollectionViewCellX.xib in Resources */,
 				96D679CC22BE6B7300D7DDD3 /* SquareCollectionViewCell.xib in Resources */,
 				96D679C222BE661B00D7DDD3 /* ComplexTableViewViewController.xib in Resources */,
 				16D42AC0243B6C0900D254E7 /* SQLLiteViewController.xib in Resources */,
 				16B0297824CC707900E99FB3 /* RotationViewController.xib in Resources */,
 				96D679C522BE68F400D7DDD3 /* ContainerCell.xib in Resources */,
 				9629E14422D221CF008577BB /* ComplexTableViewController2.xib in Resources */,
+				165647E62529CF9B00A7AF0D /* BigSquareCollectionViewCell.xib in Resources */,
 				160BAD1721C14C9E00388B5D /* Main.storyboard in Resources */,
 				167D4286230C321F0077E43D /* CustomTransitionDestinationViewController.xib in Resources */,
 				96D679D022BE902900D7DDD3 /* CircleCollectionViewCell.xib in Resources */,
 				96D679BD22BE5CDF00D7DDD3 /* HomeViewController.xib in Resources */,
 				96101D3022C77B7700EF63FF /* LayerViewController.xib in Resources */,
 				168CF9BE247BEE7500DF2627 /* ProgressViewController.xib in Resources */,
+				165647E22529CBF400A7AF0D /* RectangleCollectionViewCell.xib in Resources */,
 				9629E14D22D225B5008577BB /* MovieCollectionViewCell.xib in Resources */,
+				165647D92529CAB300A7AF0D /* CollectionViewLayoutViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,10 +509,15 @@
 				16B0297724CC707900E99FB3 /* RotationViewController.swift in Sources */,
 				96D679C122BE661B00D7DDD3 /* ComplexTableViewViewController.swift in Sources */,
 				9629E15322D22F71008577BB /* SerieCollectionViewCell.swift in Sources */,
+				165647E92529D0C500A7AF0D /* CustomCollectionLayout.swift in Sources */,
 				9629E14322D221CF008577BB /* ComplexTableViewController2.swift in Sources */,
+				165647D82529CAB300A7AF0D /* CollectionViewLayoutViewController.swift in Sources */,
+				165647E52529CF9B00A7AF0D /* BigSquareCollectionViewCell.swift in Sources */,
+				165647E12529CBF400A7AF0D /* RectangleCollectionViewCell.swift in Sources */,
 				96D679CB22BE6B7300D7DDD3 /* SquareCollectionViewCell.swift in Sources */,
 				168CF9BD247BEE7500DF2627 /* ProgressViewController.swift in Sources */,
 				160BAD1421C14C9E00388B5D /* ViewController.swift in Sources */,
+				165647DD2529CB1200A7AF0D /* SquareCollectionViewCellX.swift in Sources */,
 				160BAD1221C14C9E00388B5D /* AppDelegate.swift in Sources */,
 				96D679BC22BE5CDF00D7DDD3 /* HomeViewController.swift in Sources */,
 				9629E15022D2269B008577BB /* MovieDatasource.swift in Sources */,

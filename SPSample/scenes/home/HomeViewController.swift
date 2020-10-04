@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
     HomeItemViewModel(name: "SQLite", type: SQLLiteViewController.self),
     HomeItemViewModel(name: "Circular Progress View", type: ProgressViewController.self),
     HomeItemViewModel(name: "Rotation", type: RotationViewController.self),
+    HomeItemViewModel(name: "Custom collection view layout", type: CollectionViewLayoutViewController.self),
   ]
   
   init() {
