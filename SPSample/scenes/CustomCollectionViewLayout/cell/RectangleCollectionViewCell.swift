@@ -11,11 +11,11 @@ import UIKit
 
 class RectangleCollectionViewCell: UICollectionViewCell, NibReusable {
   
-  static let size = CGSize(width: 200, height: 100)
+  static let size = CGSize(width: 316, height: 208)
   
   override func awakeFromNib() {
     super.awakeFromNib()
-    backgroundColor = .green
+    backgroundColor = .lightGray
   }
   
 }

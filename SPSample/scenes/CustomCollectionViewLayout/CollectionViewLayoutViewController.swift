@@ -8,18 +8,95 @@
 
 import UIKit
 
-class CollectionViewLayoutViewController: UIViewController {
+enum GridItem {
+  case cell(Cell)
+  case placeHolder
   
-  enum Cell {
-    case square
-    case rectangle
-    case bigSquare
+  func toString() -> String {
+    switch self {
+    case .cell(let cell) where cell == .bigSquare:
+      return "🥶"
+    case .cell(let cell) where cell == .square:
+      return "😃"
+    case .cell(let cell) where cell == .rectangle:
+      return "☺️"
+    default:
+      return "❌"
+    }
+  }
+}
+
+enum Cell {
+  case square
+  case rectangle
+  case bigSquare
+  
+  func size() -> CGSize {
+    switch self {
+    case .square:
+      return SquareCollectionViewCellX.size
+    case .bigSquare:
+      return BigSquareCollectionViewCell.size
+    case .rectangle:
+      return RectangleCollectionViewCell.size
+    }
   }
   
-  let cells: [Cell] = [
-    .bigSquare,
-    .square, .square, .square, .square, .square, .square, .square, .square, .square, .square, .square, .square, .square, .square, .square, .square, .square, .square, .square, .square, .square, .square
-    ].shuffled()
+  
+  
+}
+
+struct Grid {
+  
+  let columnNb: Int
+  let items: [GridItem]
+  
+  func print() {
+    
+    var columnCpt = 0
+    var str = ""
+    for item in items {
+      str.append(item.toString())
+      str.append(" ")
+      columnCpt += 1
+      
+      if columnCpt == columnNb  {
+        debugPrint(str)
+        str = ""
+        columnCpt = 0
+      }
+    }
+  }
+  
+  func cellItems() -> [Cell] {
+    
+    var cells = [Cell]()
+    items.forEach { item in
+      switch item {
+      case .cell(let cell):
+        cells.append(cell)
+      default:
+        break
+      }
+    }
+    
+    return cells
+  }
+}
+
+class CollectionViewLayoutViewController: UIViewController {
+
+  let grid = Grid(
+    columnNb: 5,
+    items: [
+      GridItem.cell(.bigSquare), GridItem.placeHolder, GridItem.cell(.square), GridItem.cell(.square), GridItem.cell(.square),
+      GridItem.placeHolder, GridItem.placeHolder, GridItem.cell(.square), GridItem.cell(.square), GridItem.cell(.square),
+      GridItem.cell(.square), GridItem.cell(.square), GridItem.cell(.square), GridItem.cell(.square), GridItem.cell(.square),
+      GridItem.cell(.rectangle), GridItem.placeHolder, GridItem.placeHolder, GridItem.cell(.square), GridItem.cell(.square),
+      GridItem.placeHolder, GridItem.placeHolder, GridItem.placeHolder, GridItem.cell(.square), GridItem.cell(.square)
+    ]
+  )
+  
   
   @IBOutlet private weak var collectionView: UICollectionView!
   
@@ -40,6 +117,8 @@ class CollectionViewLayoutViewController: UIViewController {
     if let layout = collectionView?.collectionViewLayout as? CustomCollectionLayout {
       layout.delegate = self
     }
+    
+    grid.print()
   }
   
 }
@@ -47,12 +126,12 @@ class CollectionViewLayoutViewController: UIViewController {
 extension CollectionViewLayoutViewController: UICollectionViewDataSource {
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return cells.count
+    return grid.cellItems().count
   }
   
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cellType = cells[indexPath.row]
+    let cellType = grid.cellItems()[indexPath.row]
     switch cellType {
     case .rectangle:
       return collectionView.dequeueReusableCell(for: indexPath) as RectangleCollectionViewCell
@@ -64,31 +143,9 @@ extension CollectionViewLayoutViewController: UICollectionViewDataSource {
   }
 }
 
-extension CollectionViewLayoutViewController: UICollectionViewDelegateFlowLayout {
-  
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    let cellType = cells[indexPath.row]
-    switch cellType {
-    case .rectangle:
-      return RectangleCollectionViewCell.size
-    case .square:
-      return SquareCollectionViewCellX.size
-    case .bigSquare:
-      return BigSquareCollectionViewCell.size
-    }
-  }
-}
-
 extension CollectionViewLayoutViewController: CustomCollectionLayoutDelegate {
-  func collectionView(_ collectionView: UICollectionView, sizeForItemAtIndexPath indexPath: IndexPath) -> CGSize {
-    let cellType = cells[indexPath.row]
-    switch cellType {
-    case .rectangle:
-      return RectangleCollectionViewCell.size
-    case .square:
-      return SquareCollectionViewCellX.size
-    case .bigSquare:
-      return BigSquareCollectionViewCell.size
-    }
+  
+  func associatedGrid() -> Grid {
+    return grid
   }
 }

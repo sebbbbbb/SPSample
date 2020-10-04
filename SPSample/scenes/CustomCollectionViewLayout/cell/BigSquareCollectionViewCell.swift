@@ -11,7 +11,7 @@ import UIKit
 
 class BigSquareCollectionViewCell: UICollectionViewCell, NibReusable {
   
-  static let size = CGSize(width: 300, height: 300)
+  static let size = CGSize(width: 208, height: 208)
   
   override func awakeFromNib() {
     super.awakeFromNib()

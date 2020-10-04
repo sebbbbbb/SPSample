@@ -16,7 +16,7 @@ class SquareCollectionViewCellX: UICollectionViewCell, NibReusable {
   
   override func awakeFromNib() {
     super.awakeFromNib()
-    backgroundColor = .red
+    backgroundColor = .gray
   }
 
 }
