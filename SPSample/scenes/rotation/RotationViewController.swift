@@ -22,12 +22,13 @@ class RotationViewController: UIViewController {
     self.cImageWidth.constant = 50
     self.view.layoutIfNeeded()
     
-    coordinator.animate { context in
+    
+    coordinator.animate(alongsideTransition: { context in
       // will execute during rotation
       self.cImageWidth.constant = 200
       self.view.layoutIfNeeded()
-    } completion: { context in
-      // will execute after rotation
+    }) { context in
+       // will execute after rotation-
     }
   }
 }
