@@ -1,4 +1,19 @@
 PODS:
+  - collection-view-layouts/Core (0.2.2)
+  - collection-view-layouts/FacebookLayout (0.2.2):
+    - collection-view-layouts/Core
+  - collection-view-layouts/FlickrLayout (0.2.2):
+    - collection-view-layouts/Core
+  - collection-view-layouts/FlipboardLayout (0.2.2):
+    - collection-view-layouts/Core
+  - collection-view-layouts/InstagramLayout (0.2.2):
+    - collection-view-layouts/Core
+  - collection-view-layouts/PinterestLayout (0.2.2):
+    - collection-view-layouts/Core
+  - collection-view-layouts/Px500Layout (0.2.2):
+    - collection-view-layouts/Core
+  - collection-view-layouts/TagsLayout (0.2.2):
+    - collection-view-layouts/Core
   - Reusable (4.0.5):
     - Reusable/Storyboard (= 4.0.5)
     - Reusable/View (= 4.0.5)
@@ -9,18 +24,29 @@ PODS:
   - SQLite.swift/standard (0.12.2)
 
 DEPENDENCIES:
+  - collection-view-layouts/Core
+  - collection-view-layouts/FacebookLayout
+  - collection-view-layouts/FlickrLayout
+  - collection-view-layouts/FlipboardLayout
+  - collection-view-layouts/InstagramLayout
+  - collection-view-layouts/PinterestLayout
+  - collection-view-layouts/Px500Layout
+  - collection-view-layouts/TagsLayout
   - Reusable
   - SQLite.swift (~> 0.12.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Reusable
     - SQLite.swift
+  trunk:
+    - collection-view-layouts
 
 SPEC CHECKSUMS:
+  collection-view-layouts: 474ec4cce601a26247737227a97fa6a4eb30213f
   Reusable: 188be1a54ac0691bc66e5bb24ec6eb91971b315b
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
 
-PODFILE CHECKSUM: 4b59088aa7dafab02d4b601d43bf082d8d00e68b
+PODFILE CHECKSUM: 60ecc01eb56e93f139d49963f1a11733e20a2e12
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.9.3

@@ -8,5 +8,13 @@ target 'SPSample' do
   # Pods for SPSample
   pod 'Reusable'
   pod 'SQLite.swift', '~> 0.12.0'
-  
+  pod 'collection-view-layouts/Core'
+  pod 'collection-view-layouts/TagsLayout'
+  pod 'collection-view-layouts/PinterestLayout'
+  pod 'collection-view-layouts/Px500Layout'
+  pod 'collection-view-layouts/InstagramLayout'
+  pod 'collection-view-layouts/FlipboardLayout'
+  pod 'collection-view-layouts/FacebookLayout'
+  pod 'collection-view-layouts/FlickrLayout'
+
 end

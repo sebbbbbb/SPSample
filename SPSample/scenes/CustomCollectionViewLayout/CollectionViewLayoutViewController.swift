@@ -114,9 +114,9 @@ class CollectionViewLayoutViewController: UIViewController {
     collectionView.register(cellType: RectangleCollectionViewCell.self)
     collectionView.register(cellType: BigSquareCollectionViewCell.self)
     
-    if let layout = collectionView?.collectionViewLayout as? CustomCollectionLayout {
-      layout.delegate = self
-    }
+  //  if let layout = collectionView?.collectionViewLayout as? CustomCollectionLayout {
+  //    layout.delegate = self
+   // }
     
     grid.print()
   }
@@ -140,6 +140,13 @@ extension CollectionViewLayoutViewController: UICollectionViewDataSource {
     case .bigSquare:
       return collectionView.dequeueReusableCell(for: indexPath) as BigSquareCollectionViewCell
     }
+  }
+}
+
+extension CollectionViewLayoutViewController: UICollectionViewDelegateFlowLayout {
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+     let cellType = grid.cellItems()[indexPath.row]
+    return cellType.size()
   }
 }
 
