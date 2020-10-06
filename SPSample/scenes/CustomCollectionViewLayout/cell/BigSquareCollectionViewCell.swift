@@ -11,7 +11,15 @@ import UIKit
 
 class BigSquareCollectionViewCell: UICollectionViewCell, NibReusable {
   
-  static let size = CGSize(width: 208, height: 208)
+  static var size: CGSize {
+    if UIApplication.shared.statusBarOrientation.isLandscape {
+      debugPrint("Land")
+      return CGSize(width: 316, height: 316)
+    } else {
+      debugPrint("Land")
+      return CGSize(width: 208, height: 208)
+    }
+  }
   
   override func awakeFromNib() {
     super.awakeFromNib()

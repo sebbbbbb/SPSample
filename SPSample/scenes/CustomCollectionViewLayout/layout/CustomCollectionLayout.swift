@@ -10,6 +10,8 @@ import UIKit
 
 protocol CustomCollectionLayoutDelegate: AnyObject {
   func associatedGrid() -> Grid
+  func regenerateGrid()
+  
 }
 
 class CustomCollectionLayout: UICollectionViewLayout {
@@ -37,11 +39,16 @@ class CustomCollectionLayout: UICollectionViewLayout {
   
   override func prepare() {
     guard
-      cache.isEmpty,
       let _ = collectionView
       else {
         return
     }
+    
+    cache.removeAll()
+    
+    
+    
+    debugPrint("⚠️ B")
     
     var offsetY: CGFloat = 0
     var offsetX: CGFloat = 0
@@ -79,7 +86,7 @@ class CustomCollectionLayout: UICollectionViewLayout {
       }
       return visibleLayoutAttributes
   }
-  
+    
   // MARK: - Private
   
   func updateOffsets(offsetX: inout CGFloat,offsetY: inout CGFloat) {
