@@ -21,6 +21,7 @@ class HomeViewController: UIViewController {
     HomeItemViewModel(name: "Circular Progress View", type: ProgressViewController.self),
     HomeItemViewModel(name: "Rotation", type: RotationViewController.self),
     HomeItemViewModel(name: "Custom collection view layout", type: CollectionViewLayoutViewController.self),
+    HomeItemViewModel(name: "Custom collection view layout with Pod", type: CustomCollectionViewLayoutViewControllerPod.self),
   ]
   
   init() {
