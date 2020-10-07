@@ -75,11 +75,11 @@ struct Grid {
     columnNb = 5
     
     var grid: [[GridItem?]] = Array(repeating: Array(repeating: nil, count: 5), count: 10)
-    
     var z = 0
     var j = 0
     
-    for i in 0..<cells.count {
+    var i = 0
+    while i < cells.count  {
       
       let cellType = cells[i]
       
@@ -90,7 +90,7 @@ struct Grid {
         j+=1
       case .none:
         grid[z][j] = .cell(cellType)
-        
+        i+=1
         
         for a in j..<cellType.widthPt() + j {
           for b in z..<cellType.heightPt() + z {
@@ -103,7 +103,6 @@ struct Grid {
         
         j+=1
       }
-      
       
       if j == columnNb {
         z += 1
@@ -119,15 +118,19 @@ struct Grid {
     
     var columnCpt = 0
     var str = ""
+    var i = 0
     for item in items {
       str.append(item.toString())
       str.append(" ")
       columnCpt += 1
+      i+=1
       
       if columnCpt == columnNb  {
         debugPrint(str)
         str = ""
         columnCpt = 0
+      } else if i == items.count {
+        debugPrint(str)
       }
     }
     
@@ -167,7 +170,7 @@ class CollectionViewLayoutViewController: UIViewController {
   var grid = Grid(
     cells: [
       .bigSquare, .square, .square, .square,
-      .square, .square,.square, .square, .square,
+      .square, .square,.square,
       .square, .square, .square, .square, .square,
       .square, .square, .square, .square, .square
     ]
@@ -200,7 +203,7 @@ class CollectionViewLayoutViewController: UIViewController {
   /// Call on device rotation
   override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
     
-    
+    /*
     UIView.animate(withDuration: 0.300) {
       self.collectionView.alpha = 0.0
     }
@@ -217,7 +220,7 @@ class CollectionViewLayoutViewController: UIViewController {
         self.collectionView.alpha = 1.0
       }
     }
-
+*/
   }
   
 }
@@ -258,11 +261,12 @@ extension CollectionViewLayoutViewController: CustomCollectionLayoutDelegate {
     grid = Grid(
       cells: [
         .bigSquare, .square, .square, .square,
-        .square, .square,.square, .square, .square,
+        .square, .square,.square,
         .square, .square, .square, .square, .square,
         .square, .square, .square, .square, .square
       ]
     )
+    grid.print()
   }
   
   

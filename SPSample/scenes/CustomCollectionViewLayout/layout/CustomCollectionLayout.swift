@@ -45,11 +45,7 @@ class CustomCollectionLayout: UICollectionViewLayout {
     }
     
     cache.removeAll()
-    
-    
-    
-    debugPrint("⚠️ B")
-    
+ 
     var offsetY: CGFloat = 0
     var offsetX: CGFloat = 0
    
@@ -85,6 +81,13 @@ class CustomCollectionLayout: UICollectionViewLayout {
         }
       }
       return visibleLayoutAttributes
+  }
+  
+  override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+    guard let oldBounds = collectionView?.frame else { return false }
+    let shouldInvalidate = oldBounds != newBounds
+    if shouldInvalidate { delegate?.regenerateGrid() }
+    return shouldInvalidate
   }
     
   // MARK: - Private
