@@ -25,7 +25,7 @@ class CoverflowViewController: UIViewController {
     super.viewDidLoad()
     
     if let layout = collectionView?.collectionViewLayout as? CoverFlowLayout {
-      layout.scrollDirection = .horizontal
+     // layout.scrollDirection = .horizontal
     }
       
     collectionView.register(cellType: BigSquareCollectionViewCell.self)
@@ -45,9 +45,11 @@ extension CoverflowViewController: UICollectionViewDataSource {
   }
 }
 
-extension CoverflowViewController: UICollectionViewDelegateFlowLayout {
+extension CoverflowViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
   
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    
+    return
     
     let contentOffset = scrollView.contentOffset
     let visibleCells = collectionView.visibleCells
@@ -90,22 +92,76 @@ extension CoverflowViewController: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
     return 16.0
   }
-  
+
 }
 
 // MARK: -
 
-final class CoverFlowLayout: UICollectionViewFlowLayout {
+final class CoverFlowLayout: UICollectionViewLayout {
   
-  override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
-    //debugPrint(super.layoutAttributesForItem(at: indexPath))
-    return super.layoutAttributesForItem(at: indexPath)
+  
+  private var cache = [UICollectionViewLayoutAttributes]()
+  private var contentHeight: CGFloat = 0
+  private var contentWidth: CGFloat = 0
+  
+  override var collectionViewContentSize: CGSize {
+    return CGSize(width: contentWidth, height: contentHeight)
   }
   
-  override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-    //debugPrint(super.layoutAttributesForElements(in: rect))
-    return super.layoutAttributesForElements(in: rect)
+  override func prepare() {
+    guard
+      let collectionView = collectionView
+      else {
+        return
+    }
+    
+    let contentOffsetX = collectionView.contentOffset.x
+    var offsetX: CGFloat = 16.0
+    var offsetY: CGFloat = 16.0
+    
+    cache.removeAll()
+    
+    //hardcoded value Because i'm lazy
+    for i in 0..<10 {
+      let indexPath = IndexPath(row: i, section: 0)
+      
+      
+      let frame = CGRect(x: offsetX, y: offsetY, width: 300, height: 400)
+      let isCellOnScreen = CGRect(x: contentOffsetX, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height).contains(CGPoint(x: offsetX + frame.size.width * 0.5, y: frame.size.height * 0.5))
+     
+      let insetFrame = frame.insetBy(dx: 8, dy: 8)
+      let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
+      attributes.frame = insetFrame
+      
+      if isCellOnScreen {
+        let realCenter = abs((offsetX + frame.size.width * 0.5 - contentOffsetX) - UIScreen.main.bounds.width  * 0.5)
+        let ratio = 0.05 * abs(1 - realCenter / (UIScreen.main.bounds.width  * 0.5))
+        attributes.transform = CGAffineTransform(scaleX: 1 + ratio, y: 1 + 2 * ratio)
+      }
+      
+      offsetX += 300
+      cache.append(attributes)
+      contentHeight = max(contentHeight, frame.maxY)
+      contentWidth = max(contentWidth, frame.maxX)
+    }
   }
   
+  override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+    return true
+  }
+  
+  
+  override func layoutAttributesForElements(in rect: CGRect)
+    -> [UICollectionViewLayoutAttributes]? {
+      var visibleLayoutAttributes: [UICollectionViewLayoutAttributes] = []
+      
+      // Loop through the cache and look for items in the rect
+      for attributes in cache {
+        if attributes.frame.intersects(rect) {
+          visibleLayoutAttributes.append(attributes)
+        }
+      }
+      return visibleLayoutAttributes
+  }
   
 }
