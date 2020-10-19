@@ -22,6 +22,8 @@ class HomeViewController: UIViewController {
     HomeItemViewModel(name: "Rotation", type: RotationViewController.self),
     HomeItemViewModel(name: "Custom collection view layout", type: CollectionViewLayoutViewController.self),
     HomeItemViewModel(name: "Custom collection view layout with Pod", type: CustomCollectionViewLayoutViewControllerPod.self),
+    HomeItemViewModel(name: "CoverFlow effect", type: CoverflowViewController.self),
+ 
   ]
   
   init() {
