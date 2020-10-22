@@ -27,7 +27,7 @@ class ShortcutViewController: UIViewController {
     ]
   }
   
-  /// Need to be overrided to take into account user shortcut selecition
+  /// should be overrided to take into account user shortcut selecition (not needed all th time ...)
   override var canBecomeFirstResponder: Bool { return true }
   
   @objc func selectTab(sender: UIKeyCommand) {
