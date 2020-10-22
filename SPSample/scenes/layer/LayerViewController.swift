@@ -32,7 +32,7 @@ class LayerViewController: UIViewController {
     viewRounded.layer.cornerRadius = 30
     // since iOS11 you can ignore corner to have rounded effect only of top of view for example
     // see : https://developer.apple.com/documentation/quartzcore/cacornermask?utm_source=Little%20Bites%20of%20Cocoa&utm_campaign=5e8e3ea5c8-EMAIL_CAMPAIGN_2017_06_16&utm_medium=email&utm_term=0_2b6df83b4b-5e8e3ea5c8-114264253
-    viewRounded.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+   // viewRounded.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
 
     // 2 - How to apply a shadow
     

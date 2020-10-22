@@ -92,6 +92,10 @@ extension CoverflowViewController: UICollectionViewDelegateFlowLayout, UICollect
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
     return 16.0
   }
+  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    debugPrint("Selected index : \(indexPath)")
+  }
 
 }
 
@@ -122,7 +126,7 @@ final class CoverFlowLayout: UICollectionViewLayout {
     cache.removeAll()
     
     //hardcoded value Because i'm lazy
-    for i in 0..<10 {
+    for i in 0...10 {
       let indexPath = IndexPath(row: i, section: 0)
       
       
@@ -147,6 +151,7 @@ final class CoverFlowLayout: UICollectionViewLayout {
   }
   
   override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+    debugPrint("Invalidate")
     return true
   }
   
@@ -161,7 +166,14 @@ final class CoverFlowLayout: UICollectionViewLayout {
           visibleLayoutAttributes.append(attributes)
         }
       }
+      
+      debugPrint("Layout attributes \(rect)")
+      debugPrint("Layout attributes \(visibleLayoutAttributes.count)")
       return visibleLayoutAttributes
+  }
+  
+  override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+    return cache[indexPath.item]
   }
   
 }

@@ -13,6 +13,8 @@
 		160BAD1921C14C9F00388B5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 160BAD1821C14C9F00388B5D /* Assets.xcassets */; };
 		160BAD1C21C14C9F00388B5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 160BAD1A21C14C9F00388B5D /* LaunchScreen.storyboard */; };
 		160BAD2621C14D9200388B5D /* FileManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BAD2521C14D9200388B5D /* FileManagerViewController.swift */; };
+		160D5F0425418D1300405181 /* ShortcutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160D5F0225418D1300405181 /* ShortcutViewController.swift */; };
+		160D5F0525418D1300405181 /* ShortcutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 160D5F0325418D1300405181 /* ShortcutViewController.xib */; };
 		165647D82529CAB300A7AF0D /* CollectionViewLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165647D62529CAB300A7AF0D /* CollectionViewLayoutViewController.swift */; };
 		165647D92529CAB300A7AF0D /* CollectionViewLayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 165647D72529CAB300A7AF0D /* CollectionViewLayoutViewController.xib */; };
 		165647DD2529CB1200A7AF0D /* SquareCollectionViewCellX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165647DB2529CB1200A7AF0D /* SquareCollectionViewCellX.swift */; };
@@ -35,7 +37,6 @@
 		16B319C72539EAE700705F8E /* CoverflowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16B319C52539EAE700705F8E /* CoverflowViewController.xib */; };
 		16D42ABF243B6C0900D254E7 /* SQLLiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D42ABD243B6C0900D254E7 /* SQLLiteViewController.swift */; };
 		16D42AC0243B6C0900D254E7 /* SQLLiteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16D42ABE243B6C0900D254E7 /* SQLLiteViewController.xib */; };
-		16F7865D252C98C0006613AD /* CustomCollectionViewLayoutViewControllerPod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F7865B252C98C0006613AD /* CustomCollectionViewLayoutViewControllerPod.swift */; };
 		16F7865E252C98C0006613AD /* CustomCollectionViewLayoutViewControllerPod.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16F7865C252C98C0006613AD /* CustomCollectionViewLayoutViewControllerPod.xib */; };
 		96101D2F22C77B7700EF63FF /* LayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96101D2D22C77B7700EF63FF /* LayerViewController.swift */; };
 		96101D3022C77B7700EF63FF /* LayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96101D2E22C77B7700EF63FF /* LayerViewController.xib */; };
@@ -72,6 +73,8 @@
 		160BAD1B21C14C9F00388B5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		160BAD1D21C14C9F00388B5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		160BAD2521C14D9200388B5D /* FileManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerViewController.swift; sourceTree = "<group>"; };
+		160D5F0225418D1300405181 /* ShortcutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutViewController.swift; sourceTree = "<group>"; };
+		160D5F0325418D1300405181 /* ShortcutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShortcutViewController.xib; sourceTree = "<group>"; };
 		165647D62529CAB300A7AF0D /* CollectionViewLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLayoutViewController.swift; sourceTree = "<group>"; };
 		165647D72529CAB300A7AF0D /* CollectionViewLayoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewLayoutViewController.xib; sourceTree = "<group>"; };
 		165647DB2529CB1200A7AF0D /* SquareCollectionViewCellX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareCollectionViewCellX.swift; sourceTree = "<group>"; };
@@ -169,6 +172,7 @@
 		160BAD2321C14D7F00388B5D /* scenes */ = {
 			isa = PBXGroup;
 			children = (
+				160D5EFF25418CFA00405181 /* shortcut */,
 				16B319C32539EAD500705F8E /* collectionView */,
 				16F78656252C9877006613AD /* CustomCollectionViewLayoutPod */,
 				165647D52529CA9D00A7AF0D /* CustomCollectionViewLayout */,
@@ -191,6 +195,15 @@
 				160BAD2521C14D9200388B5D /* FileManagerViewController.swift */,
 			);
 			path = files;
+			sourceTree = "<group>";
+		};
+		160D5EFF25418CFA00405181 /* shortcut */ = {
+			isa = PBXGroup;
+			children = (
+				160D5F0225418D1300405181 /* ShortcutViewController.swift */,
+				160D5F0325418D1300405181 /* ShortcutViewController.xib */,
+			);
+			path = shortcut;
 			sourceTree = "<group>";
 		};
 		165647D52529CA9D00A7AF0D /* CustomCollectionViewLayout */ = {
@@ -452,6 +465,7 @@
 				9629E14922D2241A008577BB /* ContainerTableViewCell.xib in Resources */,
 				160BAD1C21C14C9F00388B5D /* LaunchScreen.storyboard in Resources */,
 				160BAD1921C14C9F00388B5D /* Assets.xcassets in Resources */,
+				160D5F0525418D1300405181 /* ShortcutViewController.xib in Resources */,
 				9629E15422D22F71008577BB /* SerieCollectionViewCell.xib in Resources */,
 				16F7865E252C98C0006613AD /* CustomCollectionViewLayoutViewControllerPod.xib in Resources */,
 				167D4282230C32060077E43D /* CustomTransitionViewController.xib in Resources */,
@@ -531,6 +545,7 @@
 				96D679C822BE6AD500D7DDD3 /* HorizontalDataSource.swift in Sources */,
 				160BAD2621C14D9200388B5D /* FileManagerViewController.swift in Sources */,
 				9629E15622D2302D008577BB /* SerieDataSource.swift in Sources */,
+				160D5F0425418D1300405181 /* ShortcutViewController.swift in Sources */,
 				167D4281230C32060077E43D /* CustomTransitionViewController.swift in Sources */,
 				167D4289230C34810077E43D /* AnimationController.swift in Sources */,
 				9629E14C22D225B5008577BB /* MovieCollectionViewCell.swift in Sources */,
@@ -538,7 +553,6 @@
 				96D679CF22BE902900D7DDD3 /* CircleCollectionViewCell.swift in Sources */,
 				16B0297724CC707900E99FB3 /* RotationViewController.swift in Sources */,
 				96D679C122BE661B00D7DDD3 /* ComplexTableViewViewController.swift in Sources */,
-				16F7865D252C98C0006613AD /* CustomCollectionViewLayoutViewControllerPod.swift in Sources */,
 				9629E15322D22F71008577BB /* SerieCollectionViewCell.swift in Sources */,
 				165647E92529D0C500A7AF0D /* CustomCollectionLayout.swift in Sources */,
 				9629E14322D221CF008577BB /* ComplexTableViewController2.swift in Sources */,
@@ -702,6 +716,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = VQEZ7Y9U3L;
 				INFOPLIST_FILE = SPSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -722,6 +737,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = VQEZ7Y9U3L;
 				INFOPLIST_FILE = SPSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -6,7 +6,7 @@
 //  Copyright © 2020 Sébastien Pécoul. All rights reserved.
 //
 
-import collection_view_layouts
+//import collection_view_layouts
 import Reusable
 import UIKit
 
