@@ -38,11 +38,9 @@ extension Model: CustomDebugStringConvertible {
   }
 }
 
-typealias ProcessStep = (Model) -> (Result<Model, Error>)
-
 protocol Process {
   var isMandatory: Bool { get set }
-  var step: ProcessStep { get set }
+  func execute(model: Model, completion: @escaping ((Result<Model, SampleError>) -> Void))
 }
 
 class Warehouse {
@@ -66,46 +64,73 @@ class Warehouse {
     
     var xyz = processes
     
-    switch processes[0].step(model) {
-    case .success(let model2):
-      xyz.removeFirst()
-      execute(model: model2, processes: xyz)
-    case .failure where processes[0].isMandatory:
-      debugPrint("End - Failure")
-      break // ??
-    case .failure:
-      xyz.removeFirst()
-      execute(model: model, processes: xyz)
+    processes[0].execute(model: model) { [weak self] result in
+      guard let self = self else { return }
+      switch result {
+      case .success(let model2):
+        xyz.removeFirst()
+        self.execute(model: model2, processes: xyz)
+      case .failure where processes[0].isMandatory:
+        debugPrint("End - Failure")
+        break // ??
+      case .failure:
+        xyz.removeFirst()
+        self.execute(model: model, processes: xyz)
+      }
     }
   }
 }
 
 class FirstProcess: Process {
+    
+  var isMandatory: Bool = false
   
-  var isMandatory: Bool = true
+//  func execute(model: Model, completion: @escaping ((Result<Model, SampleError>) -> Void)) {
+//    DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+//      debugPrint("End 1")
+//      completion(.failure(SampleError(code: 0)))
+//    }
+//  }
   
-  var step: ProcessStep = { _ in
-    .success(Model(id: 0, name: "Pépé", count: 1, rating: 0))
+  func execute(model: Model, completion: @escaping ((Result<Model, SampleError>) -> Void)) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+      debugPrint("End 1")
+      completion(.success(Model(id: 0, name: "", count: model.count + 10, rating: 0)))
+    }
   }
+  
+  
 }
 
 class SecondProcess: Process {
-  
+
   var isMandatory: Bool = false
   
-  var step: ProcessStep = { model in
-    .failure(SampleError(code: 0))
-    //.success(Model(id: 0, name: "Pépé", count: model.count + 10, rating: 0))
+//  func execute(model: Model, completion: @escaping ((Result<Model, SampleError>) -> Void)) {
+//    DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+//      debugPrint("End 2")
+//      completion(.failure(SampleError(code: 0)))
+//    }
+//  }
+  
+  func execute(model: Model, completion: @escaping ((Result<Model, SampleError>) -> Void)) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+      debugPrint("End 2")
+      completion(.success(Model(id: 0, name: "Pépé", count: model.count - 5, rating: 0)))
+    }
   }
 
 }
 
 class ThirdProcess: Process {
-  
-  var isMandatory: Bool = true
-  
-  var step: ProcessStep = { model in
-    .success(Model(id: 0, name: "Pépé", count: model.count * 10, rating: 0))
+
+  var isMandatory: Bool = false
+
+  func execute(model: Model, completion: @escaping ((Result<Model, SampleError>) -> Void)) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+      debugPrint("End 3")
+      completion(.failure(SampleError(code: 0)))
+    }
   }
 }
 
