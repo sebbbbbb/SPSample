@@ -14,7 +14,7 @@ class MultiWSProcessViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    test = Warehouse(processes: [FirstProcess(), SecondProcess(), ThirdProcess()])
+    test = Warehouse(processes: [FirstProcessX(), SecondProcess(), ThirdProcess()])
   }
   
   
@@ -30,8 +30,6 @@ class MultiWSProcessViewController: UIViewController {
       }
     }
   }
-  
-  
 }
 
 struct Model {
@@ -49,6 +47,13 @@ extension Model: CustomDebugStringConvertible {
 
 protocol Process {
   var isMandatory: Bool { get set }
+}
+
+protocol FirstProcess: Process {
+  func execute(completion: @escaping ((Result<Model, SampleError>) -> Void))
+}
+
+protocol NextProcess: Process {
   func execute(model: Model, completion: @escaping ((Result<Model, SampleError>) -> Void))
 }
 
@@ -74,25 +79,34 @@ class Warehouse {
     
     var xyz = processes
     
-    processes[0].execute(model: model) { [weak self] result in
-      guard let self = self else { return }
-      switch result {
-      case .success(let model2):
-        xyz.removeFirst()
-        self.execute(model: model2, processes: xyz, completion: completion)
-      case .failure where processes[0].isMandatory:
-        debugPrint("End - Failure")
-        completion(.failure(SampleError(code: 0)))
-        break // ??
-      case .failure:
-        xyz.removeFirst()
-        self.execute(model: model, processes: xyz, completion: completion)
-      }
+    let myClosure: ((Result<Model, SampleError>) -> Void) = { [weak self] result in
+        guard let self = self else { return }
+        switch result {
+        case .success(let model2):
+          xyz.removeFirst()
+          self.execute(model: model2, processes: xyz, completion: completion)
+        case .failure where processes[0].isMandatory:
+          debugPrint("End - Failure")
+          completion(.failure(SampleError(code: 0)))
+          break // ??
+        case .failure:
+          xyz.removeFirst()
+          self.execute(model: model, processes: xyz, completion: completion)
+        }
+    }
+  
+    
+    if let process = processes[0] as? FirstProcess {
+      process.execute(completion: myClosure)
+    } else if let process = processes[0] as? NextProcess {
+      process.execute(model: model, completion: myClosure)
+    } else {
+      assertionFailure()
     }
   }
 }
 
-class FirstProcess: Process {
+class FirstProcessX: FirstProcess {
     
   var isMandatory: Bool = false
   
@@ -103,16 +117,16 @@ class FirstProcess: Process {
 //    }
 //  }
   
-  func execute(model: Model, completion: @escaping ((Result<Model, SampleError>) -> Void)) {
+  func execute(completion: @escaping ((Result<Model, SampleError>) -> Void)) {
     DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-      completion(.success(Model(id: 0, name: "", count: model.count + 10, rating: 0)))
+      completion(.success(Model(id: 0, name: "", count: 10, rating: 0)))
     }
   }
   
   
 }
 
-class SecondProcess: Process {
+class SecondProcess: NextProcess {
 
   var isMandatory: Bool = false
   
@@ -125,13 +139,13 @@ class SecondProcess: Process {
   
   func execute(model: Model, completion: @escaping ((Result<Model, SampleError>) -> Void)) {
     DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-      completion(.success(Model(id: 0, name: "Pépé", count: model.count - 5, rating: 0)))
+      completion(.success(Model(id: 0, name: "A name", count: model.count - 5, rating: 0)))
     }
   }
 
 }
 
-class ThirdProcess: Process {
+class ThirdProcess: NextProcess {
 
   var isMandatory: Bool = false
 
