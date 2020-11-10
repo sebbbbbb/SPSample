@@ -16,5 +16,6 @@ target 'SPSample' do
   pod 'collection-view-layouts/FlipboardLayout'
   pod 'collection-view-layouts/FacebookLayout'
   pod 'collection-view-layouts/FlickrLayout'
+  pod 'PromiseLite'
 
 end

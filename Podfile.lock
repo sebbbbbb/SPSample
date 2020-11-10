@@ -14,6 +14,7 @@ PODS:
     - collection-view-layouts/Core
   - collection-view-layouts/TagsLayout (0.2.2):
     - collection-view-layouts/Core
+  - PromiseLite (1.5.0)
   - Reusable (4.0.5):
     - Reusable/Storyboard (= 4.0.5)
     - Reusable/View (= 4.0.5)
@@ -32,6 +33,7 @@ DEPENDENCIES:
   - collection-view-layouts/PinterestLayout
   - collection-view-layouts/Px500Layout
   - collection-view-layouts/TagsLayout
+  - PromiseLite
   - Reusable
   - SQLite.swift (~> 0.12.0)
 
@@ -41,12 +43,14 @@ SPEC REPOS:
     - SQLite.swift
   trunk:
     - collection-view-layouts
+    - PromiseLite
 
 SPEC CHECKSUMS:
   collection-view-layouts: 474ec4cce601a26247737227a97fa6a4eb30213f
+  PromiseLite: 1e20fc24afa6b889c00276e37e10dc74b6e5b007
   Reusable: 188be1a54ac0691bc66e5bb24ec6eb91971b315b
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
 
-PODFILE CHECKSUM: 60ecc01eb56e93f139d49963f1a11733e20a2e12
+PODFILE CHECKSUM: db2e7eecef2e33a09a4c0af4901b19e0aaf52cdf
 
 COCOAPODS: 1.10.0.rc.1
