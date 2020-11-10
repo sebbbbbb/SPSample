@@ -19,7 +19,16 @@ class MultiWSProcessViewController: UIViewController {
   
   
   @IBAction func launchProcess() {
-    test.launch()
+    test.launch() {
+      switch $0 {
+      case .success(let model):
+        debugPrint("☺️")
+        debugPrint(model)
+      case .failure:
+        debugPrint("🤬")
+        debugPrint("Error")
+      }
+    }
   }
   
   
@@ -50,15 +59,16 @@ class Warehouse {
     self.processes = processes
   }
   
-  func launch() {
-    execute(model: Model(id: 0, name: "", count: 0, rating: 0), processes: processes)
+  func launch(completion: @escaping ((Result<Model, SampleError>) -> Void)) {
+    execute(model: Model(id: 0, name: "", count: 0, rating: 0), processes: processes) {
+      completion($0)
+    }
   }
   
-  func execute(model: Model, processes: [Process]) {
+  func execute(model: Model, processes: [Process], completion: @escaping ((Result<Model, SampleError>) -> Void)) {
  
     if processes.isEmpty {
-      debugPrint(model)
-      debugPrint("End")
+      completion(.success(model))
       return
     }
     
@@ -69,13 +79,14 @@ class Warehouse {
       switch result {
       case .success(let model2):
         xyz.removeFirst()
-        self.execute(model: model2, processes: xyz)
+        self.execute(model: model2, processes: xyz, completion: completion)
       case .failure where processes[0].isMandatory:
         debugPrint("End - Failure")
+        completion(.failure(SampleError(code: 0)))
         break // ??
       case .failure:
         xyz.removeFirst()
-        self.execute(model: model, processes: xyz)
+        self.execute(model: model, processes: xyz, completion: completion)
       }
     }
   }
@@ -94,7 +105,6 @@ class FirstProcess: Process {
   
   func execute(model: Model, completion: @escaping ((Result<Model, SampleError>) -> Void)) {
     DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-      debugPrint("End 1")
       completion(.success(Model(id: 0, name: "", count: model.count + 10, rating: 0)))
     }
   }
@@ -114,8 +124,7 @@ class SecondProcess: Process {
 //  }
   
   func execute(model: Model, completion: @escaping ((Result<Model, SampleError>) -> Void)) {
-    DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-      debugPrint("End 2")
+    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
       completion(.success(Model(id: 0, name: "Pépé", count: model.count - 5, rating: 0)))
     }
   }
@@ -127,8 +136,7 @@ class ThirdProcess: Process {
   var isMandatory: Bool = false
 
   func execute(model: Model, completion: @escaping ((Result<Model, SampleError>) -> Void)) {
-    DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-      debugPrint("End 3")
+    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
       completion(.failure(SampleError(code: 0)))
     }
   }
