@@ -12,15 +12,17 @@ import UIKit
 class MultiWSProcessViewController: UIViewController {
   
   var test: Warehouse!
+  let operationManager = OperationManager()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     // Custom
     test = Warehouse(processes: [FirstProcessX(), SecondProcess(), ThirdProcess()])
+ 
+    
     
     // Promise
-    
     PromiseLiteConfiguration.debugger = DefaultPromiseLiteDebugger { print($0) }
     promiseFirstTask()
       .flatMap { self.promiseSecondTask(model:$0) }
@@ -31,6 +33,17 @@ class MultiWSProcessViewController: UIViewController {
   
   @IBAction func launchProcess() {
     test.launch() {
+      switch $0 {
+      case .success(let model):
+        debugPrint("☺️")
+        debugPrint(model)
+      case .failure:
+        debugPrint("🤬")
+        debugPrint("Error")
+      }
+    }
+    
+    operationManager.launch {
       switch $0 {
       case .success(let model):
         debugPrint("☺️")
@@ -119,7 +132,7 @@ class Warehouse {
 
 class FirstProcessX: FirstProcess {
   
-  var isMandatory: Bool = false
+  var isMandatory: Bool = true
   
   func execute(completion: @escaping ((Result<Model, SampleError>) -> Void)) {
     firstTask(completion: completion)
@@ -164,12 +177,6 @@ class SampleError: Error {
 
 // MARK: Pod Implem
 
-extension MultiWSProcessViewController {
-  
-}
-
-
-// MARK: Opération implem
 
 extension MultiWSProcessViewController {
   
@@ -218,12 +225,136 @@ extension MultiWSProcessViewController {
 }
 
 
+// MARK: Opération implem
+
+extension MultiWSProcessViewController {
+
+  
+  class OperationManager {
+    
+    var model: Model?
+    
+    func launch(completion: @escaping (Result<Model, SampleError>) -> Void) {
+      
+      DispatchQueue.global(qos: .userInteractive).async {
+        
+        let queue = OperationQueue()
+        queue.maxConcurrentOperationCount = 3
+        
+        let operation2 = SecondOperation() { operation, result in
+          debugPrint("End 2")
+          operation?.finish()
+        }
+        
+        let operation3 = ThirdOperation() { operation, result in
+          debugPrint("End 3")
+          operation?.finish()
+        }
+        
+        let operation1 = FirstOperation() { operation, result in
+          switch result {
+          case .failure:
+            operation?.cancel()
+            operation?.finish()
+          case .success(let model):
+            operation2.input = model
+            operation3.input = model
+          }
+          debugPrint("End 1")
+          operation?.finish()
+        }
+        
+        operation2.addDependency(operation1)
+        operation3.addDependency(operation1)
+        queue.addOperations([operation1, operation2, operation3], waitUntilFinished: true)
+
+        DispatchQueue.main.async {
+          completion(.failure(SampleError(code: 0)))
+        }
+      }
+    }
+  }
+  
+  class FirstOperation: AsyncOperation {
+  
+    let completion: (AsyncOperation?, Result<Model, SampleError>) -> Void
+    
+    init(completion: @escaping (AsyncOperation?, Result<Model, SampleError>) -> Void) {
+      self.completion = completion
+    }
+    
+    override func main() {
+      guard !isCancelled,
+        dependencies.filter({ $0.isCancelled }).isEmpty else {
+          cancel()
+          finish()
+          return
+      }
+      
+      firstTask { result in
+        self.completion(self, result)
+      }
+      
+    }
+  }
+  
+  class SecondOperation: AsyncOperation {
+  
+    let completion: (AsyncOperation?, Result<Model, SampleError>) -> Void
+    var input: Model?
+    
+    init(completion: @escaping (AsyncOperation?, Result<Model, SampleError>) -> Void) {
+      self.completion = completion
+    }
+    
+    override func main() {
+      guard !isCancelled,
+        dependencies.filter({ $0.isCancelled }).isEmpty else {
+          cancel()
+          finish()
+          return
+      }
+      
+      secondTask(model: input!) { result in
+        self.completion(self, result)
+      }
+      
+    }
+  }
+  
+  class ThirdOperation: AsyncOperation {
+  
+    let completion: (AsyncOperation?, Result<Model, SampleError>) -> Void
+    var input: Model?
+    
+    init(completion: @escaping (AsyncOperation?, Result<Model, SampleError>) -> Void) {
+      self.completion = completion
+    }
+    
+    override func main() {
+      guard !isCancelled,
+        dependencies.filter({ $0.isCancelled }).isEmpty else {
+          cancel()
+          finish()
+          return
+      }
+      
+      thirdTask(model: input!) { result in
+        self.completion(self, result)
+      }
+      
+    }
+  }
+}
+
 // MARK:
 
 
 func firstTask(completion: @escaping ((Result<Model, SampleError>) -> Void)) {
   DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-    completion(.success(Model(id: 0, name: "A name", count: 1, rating: 0)))
+    //completion(.success(Model(id: 0, name: "A name", count: 1, rating: 0)))
+    completion(.failure(SampleError(code: 0)))
+    
   }
 }
 

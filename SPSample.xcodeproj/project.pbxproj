@@ -37,6 +37,7 @@
 		16B319C72539EAE700705F8E /* CoverflowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16B319C52539EAE700705F8E /* CoverflowViewController.xib */; };
 		16C8157A255AD39400E502B4 /* MultiWSProcessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C81578255AD39400E502B4 /* MultiWSProcessViewController.swift */; };
 		16C8157B255AD39400E502B4 /* MultiWSProcessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16C81579255AD39400E502B4 /* MultiWSProcessViewController.xib */; };
+		16C815BA255D380500E502B4 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C815B9255D380500E502B4 /* AsyncOperation.swift */; };
 		16D42ABF243B6C0900D254E7 /* SQLLiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D42ABD243B6C0900D254E7 /* SQLLiteViewController.swift */; };
 		16D42AC0243B6C0900D254E7 /* SQLLiteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16D42ABE243B6C0900D254E7 /* SQLLiteViewController.xib */; };
 		16F7865E252C98C0006613AD /* CustomCollectionViewLayoutViewControllerPod.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16F7865C252C98C0006613AD /* CustomCollectionViewLayoutViewControllerPod.xib */; };
@@ -99,6 +100,7 @@
 		16B319C52539EAE700705F8E /* CoverflowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoverflowViewController.xib; sourceTree = "<group>"; };
 		16C81578255AD39400E502B4 /* MultiWSProcessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiWSProcessViewController.swift; sourceTree = "<group>"; };
 		16C81579255AD39400E502B4 /* MultiWSProcessViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultiWSProcessViewController.xib; sourceTree = "<group>"; };
+		16C815B9255D380500E502B4 /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		16D42ABD243B6C0900D254E7 /* SQLLiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLLiteViewController.swift; sourceTree = "<group>"; };
 		16D42ABE243B6C0900D254E7 /* SQLLiteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SQLLiteViewController.xib; sourceTree = "<group>"; };
 		16F7865B252C98C0006613AD /* CustomCollectionViewLayoutViewControllerPod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewLayoutViewControllerPod.swift; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 			children = (
 				16C81578255AD39400E502B4 /* MultiWSProcessViewController.swift */,
 				16C81579255AD39400E502B4 /* MultiWSProcessViewController.xib */,
+				16C815B9255D380500E502B4 /* AsyncOperation.swift */,
 			);
 			path = MultiWSProcess;
 			sourceTree = "<group>";
@@ -582,6 +585,7 @@
 				165647DD2529CB1200A7AF0D /* SquareCollectionViewCellX.swift in Sources */,
 				160BAD1221C14C9E00388B5D /* AppDelegate.swift in Sources */,
 				96D679BC22BE5CDF00D7DDD3 /* HomeViewController.swift in Sources */,
+				16C815BA255D380500E502B4 /* AsyncOperation.swift in Sources */,
 				9629E15022D2269B008577BB /* MovieDatasource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
