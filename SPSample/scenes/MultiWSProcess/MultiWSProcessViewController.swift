@@ -271,8 +271,10 @@ extension MultiWSProcessViewController {
     
     
     enum Operation {
-      case homeFetching
+      
       case favorite
+      case homeFetching
+  
       case mostViewedProgram
       case lastPlayedEpisodes
     }

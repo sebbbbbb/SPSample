@@ -1,4 +1,5 @@
 PODS:
+  - ATInternet-Apple-SDK/Tracker (2.19.0)
   - collection-view-layouts/Core (0.2.2)
   - collection-view-layouts/FacebookLayout (0.2.2):
     - collection-view-layouts/Core
@@ -25,6 +26,7 @@ PODS:
   - SQLite.swift/standard (0.12.2)
 
 DEPENDENCIES:
+  - ATInternet-Apple-SDK/Tracker (>= 2.0)
   - collection-view-layouts/Core
   - collection-view-layouts/FacebookLayout
   - collection-view-layouts/FlickrLayout
@@ -42,15 +44,17 @@ SPEC REPOS:
     - Reusable
     - SQLite.swift
   trunk:
+    - ATInternet-Apple-SDK
     - collection-view-layouts
     - PromiseLite
 
 SPEC CHECKSUMS:
+  ATInternet-Apple-SDK: 37c77dba0abdda62e8af431dad17daa6d7af1681
   collection-view-layouts: 474ec4cce601a26247737227a97fa6a4eb30213f
   PromiseLite: 1e20fc24afa6b889c00276e37e10dc74b6e5b007
   Reusable: 188be1a54ac0691bc66e5bb24ec6eb91971b315b
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
 
-PODFILE CHECKSUM: db2e7eecef2e33a09a4c0af4901b19e0aaf52cdf
+PODFILE CHECKSUM: 3228edc8973b691129d1ac2936818b118e6f168a
 
 COCOAPODS: 1.10.0.rc.1

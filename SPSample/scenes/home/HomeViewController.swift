@@ -25,6 +25,7 @@ class HomeViewController: UIViewController {
     HomeItemViewModel(name: "CoverFlow effect", type: CoverflowViewController.self),
     HomeItemViewModel(name: "iPad shortcut", type: ShortcutViewController.self),
     HomeItemViewModel(name: "MultiWSProcessViewController", type: MultiWSProcessViewController.self),
+    HomeItemViewModel(name: "Custom View", type: CustomViewViewController.self),
   ]
   
   init() {

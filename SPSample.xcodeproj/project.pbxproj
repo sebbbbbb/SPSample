@@ -24,6 +24,9 @@
 		165647E52529CF9B00A7AF0D /* BigSquareCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165647E32529CF9B00A7AF0D /* BigSquareCollectionViewCell.swift */; };
 		165647E62529CF9B00A7AF0D /* BigSquareCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 165647E42529CF9B00A7AF0D /* BigSquareCollectionViewCell.xib */; };
 		165647E92529D0C500A7AF0D /* CustomCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165647E82529D0C500A7AF0D /* CustomCollectionLayout.swift */; };
+		1671709F2566A57B00D96D2D /* CustomViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1671709D2566A57B00D96D2D /* CustomViewViewController.swift */; };
+		167170A02566A57B00D96D2D /* CustomViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1671709E2566A57B00D96D2D /* CustomViewViewController.xib */; };
+		167170A52566A5B900D96D2D /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167170A42566A5B900D96D2D /* CircleView.swift */; };
 		167D4281230C32060077E43D /* CustomTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167D427F230C32060077E43D /* CustomTransitionViewController.swift */; };
 		167D4282230C32060077E43D /* CustomTransitionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 167D4280230C32060077E43D /* CustomTransitionViewController.xib */; };
 		167D4285230C321F0077E43D /* CustomTransitionDestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167D4283230C321F0077E43D /* CustomTransitionDestinationViewController.swift */; };
@@ -41,6 +44,7 @@
 		16D42ABF243B6C0900D254E7 /* SQLLiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D42ABD243B6C0900D254E7 /* SQLLiteViewController.swift */; };
 		16D42AC0243B6C0900D254E7 /* SQLLiteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16D42ABE243B6C0900D254E7 /* SQLLiteViewController.xib */; };
 		16F7865E252C98C0006613AD /* CustomCollectionViewLayoutViewControllerPod.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16F7865C252C98C0006613AD /* CustomCollectionViewLayoutViewControllerPod.xib */; };
+		660369879D87364E3D20A69D /* libPods-SPSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A506F45E106A740E68FE550F /* libPods-SPSample.a */; };
 		96101D2F22C77B7700EF63FF /* LayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96101D2D22C77B7700EF63FF /* LayerViewController.swift */; };
 		96101D3022C77B7700EF63FF /* LayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96101D2E22C77B7700EF63FF /* LayerViewController.xib */; };
 		9629E14322D221CF008577BB /* ComplexTableViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9629E14122D221CF008577BB /* ComplexTableViewController2.swift */; };
@@ -63,11 +67,9 @@
 		96D679CC22BE6B7300D7DDD3 /* SquareCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96D679CA22BE6B7300D7DDD3 /* SquareCollectionViewCell.xib */; };
 		96D679CF22BE902900D7DDD3 /* CircleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D679CD22BE902900D7DDD3 /* CircleCollectionViewCell.swift */; };
 		96D679D022BE902900D7DDD3 /* CircleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96D679CE22BE902900D7DDD3 /* CircleCollectionViewCell.xib */; };
-		E1EF7FC5CCD88D68B772C238 /* Pods_SPSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 012871850475E0FA8204481B /* Pods_SPSample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		012871850475E0FA8204481B /* Pods_SPSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SPSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		160BAD0E21C14C9E00388B5D /* SPSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		160BAD1121C14C9E00388B5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		160BAD1321C14C9E00388B5D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,9 @@
 		165647E32529CF9B00A7AF0D /* BigSquareCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigSquareCollectionViewCell.swift; sourceTree = "<group>"; };
 		165647E42529CF9B00A7AF0D /* BigSquareCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BigSquareCollectionViewCell.xib; sourceTree = "<group>"; };
 		165647E82529D0C500A7AF0D /* CustomCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionLayout.swift; sourceTree = "<group>"; };
+		1671709D2566A57B00D96D2D /* CustomViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewViewController.swift; sourceTree = "<group>"; };
+		1671709E2566A57B00D96D2D /* CustomViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomViewViewController.xib; sourceTree = "<group>"; };
+		167170A42566A5B900D96D2D /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		167D427F230C32060077E43D /* CustomTransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitionViewController.swift; sourceTree = "<group>"; };
 		167D4280230C32060077E43D /* CustomTransitionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTransitionViewController.xib; sourceTree = "<group>"; };
 		167D4283230C321F0077E43D /* CustomTransitionDestinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitionDestinationViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +134,7 @@
 		96D679CA22BE6B7300D7DDD3 /* SquareCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SquareCollectionViewCell.xib; sourceTree = "<group>"; };
 		96D679CD22BE902900D7DDD3 /* CircleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCollectionViewCell.swift; sourceTree = "<group>"; };
 		96D679CE22BE902900D7DDD3 /* CircleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CircleCollectionViewCell.xib; sourceTree = "<group>"; };
+		A506F45E106A740E68FE550F /* libPods-SPSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SPSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1EF7FC5CCD88D68B772C238 /* Pods_SPSample.framework in Frameworks */,
+				660369879D87364E3D20A69D /* libPods-SPSample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +184,7 @@
 		160BAD2321C14D7F00388B5D /* scenes */ = {
 			isa = PBXGroup;
 			children = (
+				167170A22566A58400D96D2D /* customView */,
 				16C81577255AD37200E502B4 /* MultiWSProcess */,
 				160D5EFF25418CFA00405181 /* shortcut */,
 				16B319C32539EAD500705F8E /* collectionView */,
@@ -243,6 +250,16 @@
 				165647E82529D0C500A7AF0D /* CustomCollectionLayout.swift */,
 			);
 			path = layout;
+			sourceTree = "<group>";
+		};
+		167170A22566A58400D96D2D /* customView */ = {
+			isa = PBXGroup;
+			children = (
+				1671709D2566A57B00D96D2D /* CustomViewViewController.swift */,
+				1671709E2566A57B00D96D2D /* CustomViewViewController.xib */,
+				167170A42566A5B900D96D2D /* CircleView.swift */,
+			);
+			path = customView;
 			sourceTree = "<group>";
 		};
 		167D427E230C31F00077E43D /* customTransition */ = {
@@ -323,7 +340,7 @@
 		8C0FA07989E6AE03AB5FC259 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				012871850475E0FA8204481B /* Pods_SPSample.framework */,
+				A506F45E106A740E68FE550F /* libPods-SPSample.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -430,7 +447,7 @@
 				160BAD0A21C14C9E00388B5D /* Sources */,
 				160BAD0B21C14C9E00388B5D /* Frameworks */,
 				160BAD0C21C14C9E00388B5D /* Resources */,
-				63E7F41F9D2C9E7B948B55C3 /* [CP] Embed Pods Frameworks */,
+				37D5A56D9825D05F29C7C093 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -500,6 +517,7 @@
 				167D4286230C321F0077E43D /* CustomTransitionDestinationViewController.xib in Resources */,
 				96D679D022BE902900D7DDD3 /* CircleCollectionViewCell.xib in Resources */,
 				96D679BD22BE5CDF00D7DDD3 /* HomeViewController.xib in Resources */,
+				167170A02566A57B00D96D2D /* CustomViewViewController.xib in Resources */,
 				96101D3022C77B7700EF63FF /* LayerViewController.xib in Resources */,
 				168CF9BE247BEE7500DF2627 /* ProgressViewController.xib in Resources */,
 				165647E22529CBF400A7AF0D /* RectangleCollectionViewCell.xib in Resources */,
@@ -511,6 +529,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		37D5A56D9825D05F29C7C093 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SPSample/Pods-SPSample-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SPSample/Pods-SPSample-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SPSample/Pods-SPSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		54823A589634D58706848E3F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -533,23 +568,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		63E7F41F9D2C9E7B948B55C3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SPSample/Pods-SPSample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SPSample/Pods-SPSample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SPSample/Pods-SPSample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -566,6 +584,7 @@
 				160D5F0425418D1300405181 /* ShortcutViewController.swift in Sources */,
 				167D4281230C32060077E43D /* CustomTransitionViewController.swift in Sources */,
 				167D4289230C34810077E43D /* AnimationController.swift in Sources */,
+				1671709F2566A57B00D96D2D /* CustomViewViewController.swift in Sources */,
 				9629E14C22D225B5008577BB /* MovieCollectionViewCell.swift in Sources */,
 				96101D2F22C77B7700EF63FF /* LayerViewController.swift in Sources */,
 				96D679CF22BE902900D7DDD3 /* CircleCollectionViewCell.swift in Sources */,
@@ -580,6 +599,7 @@
 				165647E12529CBF400A7AF0D /* RectangleCollectionViewCell.swift in Sources */,
 				96D679CB22BE6B7300D7DDD3 /* SquareCollectionViewCell.swift in Sources */,
 				168CF9BD247BEE7500DF2627 /* ProgressViewController.swift in Sources */,
+				167170A52566A5B900D96D2D /* CircleView.swift in Sources */,
 				16B319C62539EAE700705F8E /* CoverflowViewController.swift in Sources */,
 				160BAD1421C14C9E00388B5D /* ViewController.swift in Sources */,
 				165647DD2529CB1200A7AF0D /* SquareCollectionViewCellX.swift in Sources */,
