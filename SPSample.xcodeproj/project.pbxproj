@@ -15,6 +15,7 @@
 		160BAD2621C14D9200388B5D /* FileManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160BAD2521C14D9200388B5D /* FileManagerViewController.swift */; };
 		160D5F0425418D1300405181 /* ShortcutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160D5F0225418D1300405181 /* ShortcutViewController.swift */; };
 		160D5F0525418D1300405181 /* ShortcutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 160D5F0325418D1300405181 /* ShortcutViewController.xib */; };
+		163BF9CE25F27AE800F3C248 /* InfiniteScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163BF9CC25F27AE800F3C248 /* InfiniteScrollViewController.swift */; };
 		165647D82529CAB300A7AF0D /* CollectionViewLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165647D62529CAB300A7AF0D /* CollectionViewLayoutViewController.swift */; };
 		165647D92529CAB300A7AF0D /* CollectionViewLayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 165647D72529CAB300A7AF0D /* CollectionViewLayoutViewController.xib */; };
 		165647DD2529CB1200A7AF0D /* SquareCollectionViewCellX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165647DB2529CB1200A7AF0D /* SquareCollectionViewCellX.swift */; };
@@ -34,6 +35,8 @@
 		167D4289230C34810077E43D /* AnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167D4288230C34810077E43D /* AnimationController.swift */; };
 		168CF9BD247BEE7500DF2627 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168CF9BB247BEE7500DF2627 /* ProgressViewController.swift */; };
 		168CF9BE247BEE7500DF2627 /* ProgressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 168CF9BC247BEE7500DF2627 /* ProgressViewController.xib */; };
+		169B4E2C25EFDD7C0074DFA5 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169B4E2A25EFDD7C0074DFA5 /* AnimationViewController.swift */; };
+		169B4E2D25EFDD7C0074DFA5 /* AnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 169B4E2B25EFDD7C0074DFA5 /* AnimationViewController.xib */; };
 		16B0297724CC707900E99FB3 /* RotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B0297524CC707900E99FB3 /* RotationViewController.swift */; };
 		16B0297824CC707900E99FB3 /* RotationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16B0297624CC707900E99FB3 /* RotationViewController.xib */; };
 		16B319C62539EAE700705F8E /* CoverflowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B319C42539EAE700705F8E /* CoverflowViewController.swift */; };
@@ -43,6 +46,13 @@
 		16C815BA255D380500E502B4 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C815B9255D380500E502B4 /* AsyncOperation.swift */; };
 		16D42ABF243B6C0900D254E7 /* SQLLiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D42ABD243B6C0900D254E7 /* SQLLiteViewController.swift */; };
 		16D42AC0243B6C0900D254E7 /* SQLLiteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16D42ABE243B6C0900D254E7 /* SQLLiteViewController.xib */; };
+		16F1A3D025E143EF007B5882 /* Datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F1A3CF25E143EF007B5882 /* Datasource.swift */; };
+		16F1A3D425E1443B007B5882 /* Sample+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F1A3D325E1443B007B5882 /* Sample+Extension.swift */; };
+		16F1A3DB25E1451A007B5882 /* AudioMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F1A3D925E1451A007B5882 /* AudioMenuViewController.swift */; };
+		16F1A3DC25E1451A007B5882 /* AudioMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16F1A3DA25E1451A007B5882 /* AudioMenuViewController.xib */; };
+		16F1A3E025E1459D007B5882 /* AVAudioEngineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F1A3DE25E1459D007B5882 /* AVAudioEngineViewController.swift */; };
+		16F1A3E125E1459D007B5882 /* AVAudioEngineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16F1A3DF25E1459D007B5882 /* AVAudioEngineViewController.xib */; };
+		16F1A3E725E14661007B5882 /* download_no_downloaded_content.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 16F1A3E625E14661007B5882 /* download_no_downloaded_content.mp3 */; };
 		16F7865E252C98C0006613AD /* CustomCollectionViewLayoutViewControllerPod.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16F7865C252C98C0006613AD /* CustomCollectionViewLayoutViewControllerPod.xib */; };
 		660369879D87364E3D20A69D /* libPods-SPSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A506F45E106A740E68FE550F /* libPods-SPSample.a */; };
 		96101D2F22C77B7700EF63FF /* LayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96101D2D22C77B7700EF63FF /* LayerViewController.swift */; };
@@ -80,6 +90,7 @@
 		160BAD2521C14D9200388B5D /* FileManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerViewController.swift; sourceTree = "<group>"; };
 		160D5F0225418D1300405181 /* ShortcutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutViewController.swift; sourceTree = "<group>"; };
 		160D5F0325418D1300405181 /* ShortcutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShortcutViewController.xib; sourceTree = "<group>"; };
+		163BF9CC25F27AE800F3C248 /* InfiniteScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteScrollViewController.swift; sourceTree = "<group>"; };
 		165647D62529CAB300A7AF0D /* CollectionViewLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLayoutViewController.swift; sourceTree = "<group>"; };
 		165647D72529CAB300A7AF0D /* CollectionViewLayoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewLayoutViewController.xib; sourceTree = "<group>"; };
 		165647DB2529CB1200A7AF0D /* SquareCollectionViewCellX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareCollectionViewCellX.swift; sourceTree = "<group>"; };
@@ -99,6 +110,8 @@
 		167D4288230C34810077E43D /* AnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationController.swift; sourceTree = "<group>"; };
 		168CF9BB247BEE7500DF2627 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		168CF9BC247BEE7500DF2627 /* ProgressViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressViewController.xib; sourceTree = "<group>"; };
+		169B4E2A25EFDD7C0074DFA5 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
+		169B4E2B25EFDD7C0074DFA5 /* AnimationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimationViewController.xib; sourceTree = "<group>"; };
 		16B0297524CC707900E99FB3 /* RotationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationViewController.swift; sourceTree = "<group>"; };
 		16B0297624CC707900E99FB3 /* RotationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RotationViewController.xib; sourceTree = "<group>"; };
 		16B319C42539EAE700705F8E /* CoverflowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverflowViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +121,13 @@
 		16C815B9255D380500E502B4 /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		16D42ABD243B6C0900D254E7 /* SQLLiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLLiteViewController.swift; sourceTree = "<group>"; };
 		16D42ABE243B6C0900D254E7 /* SQLLiteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SQLLiteViewController.xib; sourceTree = "<group>"; };
+		16F1A3CF25E143EF007B5882 /* Datasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datasource.swift; sourceTree = "<group>"; };
+		16F1A3D325E1443B007B5882 /* Sample+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sample+Extension.swift"; sourceTree = "<group>"; };
+		16F1A3D925E1451A007B5882 /* AudioMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMenuViewController.swift; sourceTree = "<group>"; };
+		16F1A3DA25E1451A007B5882 /* AudioMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioMenuViewController.xib; sourceTree = "<group>"; };
+		16F1A3DE25E1459D007B5882 /* AVAudioEngineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVAudioEngineViewController.swift; sourceTree = "<group>"; };
+		16F1A3DF25E1459D007B5882 /* AVAudioEngineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AVAudioEngineViewController.xib; sourceTree = "<group>"; };
+		16F1A3E625E14661007B5882 /* download_no_downloaded_content.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = download_no_downloaded_content.mp3; sourceTree = "<group>"; };
 		16F7865B252C98C0006613AD /* CustomCollectionViewLayoutViewControllerPod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewLayoutViewControllerPod.swift; sourceTree = "<group>"; };
 		16F7865C252C98C0006613AD /* CustomCollectionViewLayoutViewControllerPod.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewLayoutViewControllerPod.xib; sourceTree = "<group>"; };
 		1FA75EA19783DC8A92ED5F0C /* Pods-SPSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SPSample/Pods-SPSample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +190,9 @@
 		160BAD1021C14C9E00388B5D /* SPSample */ = {
 			isa = PBXGroup;
 			children = (
+				16F1A3E325E14628007B5882 /* res */,
+				16F1A3D225E1442F007B5882 /* extension */,
+				16F1A3C625E14342007B5882 /* common */,
 				160BAD2321C14D7F00388B5D /* scenes */,
 				160BAD1121C14C9E00388B5D /* AppDelegate.swift */,
 				160BAD1321C14C9E00388B5D /* ViewController.swift */,
@@ -184,6 +207,9 @@
 		160BAD2321C14D7F00388B5D /* scenes */ = {
 			isa = PBXGroup;
 			children = (
+				163BF9CB25F27AD600F3C248 /* infinite-slider */,
+				169B4E2925EFDD650074DFA5 /* animation */,
+				16F1A3D825E14504007B5882 /* audio */,
 				167170A22566A58400D96D2D /* customView */,
 				16C81577255AD37200E502B4 /* MultiWSProcess */,
 				160D5EFF25418CFA00405181 /* shortcut */,
@@ -218,6 +244,14 @@
 				160D5F0325418D1300405181 /* ShortcutViewController.xib */,
 			);
 			path = shortcut;
+			sourceTree = "<group>";
+		};
+		163BF9CB25F27AD600F3C248 /* infinite-slider */ = {
+			isa = PBXGroup;
+			children = (
+				163BF9CC25F27AE800F3C248 /* InfiniteScrollViewController.swift */,
+			);
+			path = "infinite-slider";
 			sourceTree = "<group>";
 		};
 		165647D52529CA9D00A7AF0D /* CustomCollectionViewLayout */ = {
@@ -291,6 +325,15 @@
 			path = progressView;
 			sourceTree = "<group>";
 		};
+		169B4E2925EFDD650074DFA5 /* animation */ = {
+			isa = PBXGroup;
+			children = (
+				169B4E2A25EFDD7C0074DFA5 /* AnimationViewController.swift */,
+				169B4E2B25EFDD7C0074DFA5 /* AnimationViewController.xib */,
+			);
+			path = animation;
+			sourceTree = "<group>";
+		};
 		16B0297424CC705D00E99FB3 /* rotation */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,6 +369,49 @@
 				16D42ABE243B6C0900D254E7 /* SQLLiteViewController.xib */,
 			);
 			path = SQLite;
+			sourceTree = "<group>";
+		};
+		16F1A3C625E14342007B5882 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				16F1A3CF25E143EF007B5882 /* Datasource.swift */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		16F1A3D225E1442F007B5882 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				16F1A3D325E1443B007B5882 /* Sample+Extension.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		16F1A3D825E14504007B5882 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				16F1A3D925E1451A007B5882 /* AudioMenuViewController.swift */,
+				16F1A3DA25E1451A007B5882 /* AudioMenuViewController.xib */,
+				16F1A3DE25E1459D007B5882 /* AVAudioEngineViewController.swift */,
+				16F1A3DF25E1459D007B5882 /* AVAudioEngineViewController.xib */,
+			);
+			path = audio;
+			sourceTree = "<group>";
+		};
+		16F1A3E325E14628007B5882 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				16F1A3E525E14637007B5882 /* audio */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		16F1A3E525E14637007B5882 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				16F1A3E625E14661007B5882 /* download_no_downloaded_content.mp3 */,
+			);
+			path = audio;
 			sourceTree = "<group>";
 		};
 		16F78656252C9877006613AD /* CustomCollectionViewLayoutPod */ = {
@@ -498,15 +584,19 @@
 			files = (
 				9629E14922D2241A008577BB /* ContainerTableViewCell.xib in Resources */,
 				160BAD1C21C14C9F00388B5D /* LaunchScreen.storyboard in Resources */,
+				16F1A3E725E14661007B5882 /* download_no_downloaded_content.mp3 in Resources */,
 				160BAD1921C14C9F00388B5D /* Assets.xcassets in Resources */,
 				160D5F0525418D1300405181 /* ShortcutViewController.xib in Resources */,
 				9629E15422D22F71008577BB /* SerieCollectionViewCell.xib in Resources */,
 				16F7865E252C98C0006613AD /* CustomCollectionViewLayoutViewControllerPod.xib in Resources */,
+				16F1A3DC25E1451A007B5882 /* AudioMenuViewController.xib in Resources */,
+				16F1A3E125E1459D007B5882 /* AVAudioEngineViewController.xib in Resources */,
 				167D4282230C32060077E43D /* CustomTransitionViewController.xib in Resources */,
 				165647DE2529CB1200A7AF0D /* SquareCollectionViewCellX.xib in Resources */,
 				96D679CC22BE6B7300D7DDD3 /* SquareCollectionViewCell.xib in Resources */,
 				96D679C222BE661B00D7DDD3 /* ComplexTableViewViewController.xib in Resources */,
 				16D42AC0243B6C0900D254E7 /* SQLLiteViewController.xib in Resources */,
+				169B4E2D25EFDD7C0074DFA5 /* AnimationViewController.xib in Resources */,
 				16B319C72539EAE700705F8E /* CoverflowViewController.xib in Resources */,
 				16B0297824CC707900E99FB3 /* RotationViewController.xib in Resources */,
 				96D679C522BE68F400D7DDD3 /* ContainerCell.xib in Resources */,
@@ -581,6 +671,7 @@
 				96D679C822BE6AD500D7DDD3 /* HorizontalDataSource.swift in Sources */,
 				160BAD2621C14D9200388B5D /* FileManagerViewController.swift in Sources */,
 				9629E15622D2302D008577BB /* SerieDataSource.swift in Sources */,
+				169B4E2C25EFDD7C0074DFA5 /* AnimationViewController.swift in Sources */,
 				160D5F0425418D1300405181 /* ShortcutViewController.swift in Sources */,
 				167D4281230C32060077E43D /* CustomTransitionViewController.swift in Sources */,
 				167D4289230C34810077E43D /* AnimationController.swift in Sources */,
@@ -590,9 +681,12 @@
 				96D679CF22BE902900D7DDD3 /* CircleCollectionViewCell.swift in Sources */,
 				16B0297724CC707900E99FB3 /* RotationViewController.swift in Sources */,
 				96D679C122BE661B00D7DDD3 /* ComplexTableViewViewController.swift in Sources */,
+				16F1A3DB25E1451A007B5882 /* AudioMenuViewController.swift in Sources */,
 				9629E15322D22F71008577BB /* SerieCollectionViewCell.swift in Sources */,
 				165647E92529D0C500A7AF0D /* CustomCollectionLayout.swift in Sources */,
 				9629E14322D221CF008577BB /* ComplexTableViewController2.swift in Sources */,
+				16F1A3D025E143EF007B5882 /* Datasource.swift in Sources */,
+				163BF9CE25F27AE800F3C248 /* InfiniteScrollViewController.swift in Sources */,
 				165647D82529CAB300A7AF0D /* CollectionViewLayoutViewController.swift in Sources */,
 				165647E52529CF9B00A7AF0D /* BigSquareCollectionViewCell.swift in Sources */,
 				16C8157A255AD39400E502B4 /* MultiWSProcessViewController.swift in Sources */,
@@ -605,7 +699,9 @@
 				165647DD2529CB1200A7AF0D /* SquareCollectionViewCellX.swift in Sources */,
 				160BAD1221C14C9E00388B5D /* AppDelegate.swift in Sources */,
 				96D679BC22BE5CDF00D7DDD3 /* HomeViewController.swift in Sources */,
+				16F1A3D425E1443B007B5882 /* Sample+Extension.swift in Sources */,
 				16C815BA255D380500E502B4 /* AsyncOperation.swift in Sources */,
+				16F1A3E025E1459D007B5882 /* AVAudioEngineViewController.swift in Sources */,
 				9629E15022D2269B008577BB /* MovieDatasource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

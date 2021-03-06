@@ -12,22 +12,27 @@ class HomeViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
   
-  let viewModel = [
-    HomeItemViewModel(name: "ComplexTableView", type: ComplexTableViewViewController.self),
-    HomeItemViewModel(name: "ComplexTableView2", type: ComplexTableViewController2.self),
-    HomeItemViewModel(name: "Layer", type: LayerViewController.self),
-    HomeItemViewModel(name: "Transition", type: CustomTransitionViewController.self),
-    HomeItemViewModel(name: "SQLite", type: SQLLiteViewController.self),
-    HomeItemViewModel(name: "Circular Progress View", type: ProgressViewController.self),
-    HomeItemViewModel(name: "Rotation", type: RotationViewController.self),
-    HomeItemViewModel(name: "Custom collection view layout", type: CollectionViewLayoutViewController.self),
-   // HomeItemViewModel(name: "Custom collection view layout with Pod", type: CustomCollectionViewLayoutViewControllerPod.self),
-    HomeItemViewModel(name: "CoverFlow effect", type: CoverflowViewController.self),
-    HomeItemViewModel(name: "iPad shortcut", type: ShortcutViewController.self),
-    HomeItemViewModel(name: "MultiWSProcessViewController", type: MultiWSProcessViewController.self),
-    HomeItemViewModel(name: "Custom View", type: CustomViewViewController.self),
-  ]
-  
+  let dataSource = Datasource(
+    viewModel:[
+      HomeItemViewModel(name: "ComplexTableView", type: ComplexTableViewViewController.self),
+      HomeItemViewModel(name: "ComplexTableView2", type: ComplexTableViewController2.self),
+      HomeItemViewModel(name: "Layer", type: LayerViewController.self),
+      HomeItemViewModel(name: "Transition", type: CustomTransitionViewController.self),
+      HomeItemViewModel(name: "SQLite", type: SQLLiteViewController.self),
+      HomeItemViewModel(name: "Circular Progress View", type: ProgressViewController.self),
+      HomeItemViewModel(name: "Rotation", type: RotationViewController.self),
+      HomeItemViewModel(name: "Custom collection view layout", type: CollectionViewLayoutViewController.self),
+      // HomeItemViewModel(name: "Custom collection view layout with Pod", type: CustomCollectionViewLayoutViewControllerPod.self),
+      HomeItemViewModel(name: "CoverFlow effect", type: CoverflowViewController.self),
+      HomeItemViewModel(name: "iPad shortcut", type: ShortcutViewController.self),
+      HomeItemViewModel(name: "MultiWSProcessViewController", type: MultiWSProcessViewController.self),
+      HomeItemViewModel(name: "Custom View", type: CustomViewViewController.self),
+      HomeItemViewModel(name: "Audio", type: AudioMenuViewController.self),
+      HomeItemViewModel(name: "Animation", type: AnimationViewController.self),
+      HomeItemViewModel(name: "Scroll infinie", type: InfiniteScrollViewController.self)
+    ]
+  )
+
   init() {
     super.init(nibName: nil, bundle: nil)
   }
@@ -38,25 +43,10 @@ class HomeViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    tableView.delegate = dataSource
+    tableView.dataSource = dataSource
   }
 
-}
-
-extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
-  
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return viewModel.count
-  }
-  
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = UITableViewCell(style: .default, reuseIdentifier: .none)
-    cell.textLabel?.text = viewModel[indexPath.row].name
-    return cell
-  }
-  
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    self.navigationController?.pushViewController(viewModel[indexPath.row].type.init(), animated: true)
-  }
 }
 
 class HomeItemViewModel {
