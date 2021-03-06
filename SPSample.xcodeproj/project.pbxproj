@@ -35,8 +35,6 @@
 		167D4289230C34810077E43D /* AnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167D4288230C34810077E43D /* AnimationController.swift */; };
 		168CF9BD247BEE7500DF2627 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168CF9BB247BEE7500DF2627 /* ProgressViewController.swift */; };
 		168CF9BE247BEE7500DF2627 /* ProgressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 168CF9BC247BEE7500DF2627 /* ProgressViewController.xib */; };
-		169B4E2C25EFDD7C0074DFA5 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169B4E2A25EFDD7C0074DFA5 /* AnimationViewController.swift */; };
-		169B4E2D25EFDD7C0074DFA5 /* AnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 169B4E2B25EFDD7C0074DFA5 /* AnimationViewController.xib */; };
 		16B0297724CC707900E99FB3 /* RotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B0297524CC707900E99FB3 /* RotationViewController.swift */; };
 		16B0297824CC707900E99FB3 /* RotationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16B0297624CC707900E99FB3 /* RotationViewController.xib */; };
 		16B319C62539EAE700705F8E /* CoverflowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B319C42539EAE700705F8E /* CoverflowViewController.swift */; };
@@ -67,8 +65,8 @@
 		9629E15322D22F71008577BB /* SerieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9629E15122D22F71008577BB /* SerieCollectionViewCell.swift */; };
 		9629E15422D22F71008577BB /* SerieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9629E15222D22F71008577BB /* SerieCollectionViewCell.xib */; };
 		9629E15622D2302D008577BB /* SerieDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9629E15522D2302D008577BB /* SerieDataSource.swift */; };
-		96D679BC22BE5CDF00D7DDD3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D679BA22BE5CDF00D7DDD3 /* HomeViewController.swift */; };
-		96D679BD22BE5CDF00D7DDD3 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96D679BB22BE5CDF00D7DDD3 /* HomeViewController.xib */; };
+		96D679BC22BE5CDF00D7DDD3 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D679BA22BE5CDF00D7DDD3 /* MenuViewController.swift */; };
+		96D679BD22BE5CDF00D7DDD3 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96D679BB22BE5CDF00D7DDD3 /* MenuViewController.xib */; };
 		96D679C122BE661B00D7DDD3 /* ComplexTableViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D679BF22BE661B00D7DDD3 /* ComplexTableViewViewController.swift */; };
 		96D679C222BE661B00D7DDD3 /* ComplexTableViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96D679C022BE661B00D7DDD3 /* ComplexTableViewViewController.xib */; };
 		96D679C522BE68F400D7DDD3 /* ContainerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96D679C422BE68F400D7DDD3 /* ContainerCell.xib */; };
@@ -110,8 +108,6 @@
 		167D4288230C34810077E43D /* AnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationController.swift; sourceTree = "<group>"; };
 		168CF9BB247BEE7500DF2627 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		168CF9BC247BEE7500DF2627 /* ProgressViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressViewController.xib; sourceTree = "<group>"; };
-		169B4E2A25EFDD7C0074DFA5 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
-		169B4E2B25EFDD7C0074DFA5 /* AnimationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimationViewController.xib; sourceTree = "<group>"; };
 		16B0297524CC707900E99FB3 /* RotationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationViewController.swift; sourceTree = "<group>"; };
 		16B0297624CC707900E99FB3 /* RotationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RotationViewController.xib; sourceTree = "<group>"; };
 		16B319C42539EAE700705F8E /* CoverflowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverflowViewController.swift; sourceTree = "<group>"; };
@@ -144,8 +140,8 @@
 		9629E15122D22F71008577BB /* SerieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieCollectionViewCell.swift; sourceTree = "<group>"; };
 		9629E15222D22F71008577BB /* SerieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SerieCollectionViewCell.xib; sourceTree = "<group>"; };
 		9629E15522D2302D008577BB /* SerieDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieDataSource.swift; sourceTree = "<group>"; };
-		96D679BA22BE5CDF00D7DDD3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		96D679BB22BE5CDF00D7DDD3 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		96D679BA22BE5CDF00D7DDD3 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		96D679BB22BE5CDF00D7DDD3 /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		96D679BF22BE661B00D7DDD3 /* ComplexTableViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexTableViewViewController.swift; sourceTree = "<group>"; };
 		96D679C022BE661B00D7DDD3 /* ComplexTableViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComplexTableViewViewController.xib; sourceTree = "<group>"; };
 		96D679C422BE68F400D7DDD3 /* ContainerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContainerCell.xib; sourceTree = "<group>"; };
@@ -207,24 +203,13 @@
 		160BAD2321C14D7F00388B5D /* scenes */ = {
 			isa = PBXGroup;
 			children = (
-				163BF9CB25F27AD600F3C248 /* infinite-slider */,
-				169B4E2925EFDD650074DFA5 /* animation */,
+				163BF9E725F400D200F3C248 /* Other */,
+				163BF9E625F400CD00F3C248 /* Persistence */,
+				163BF9E525F400C200F3C248 /* Animation */,
+				163BF9E425F400BB00F3C248 /* New Group */,
+				163BF9E325F400B500F3C248 /* UIKit */,
 				16F1A3D825E14504007B5882 /* audio */,
-				167170A22566A58400D96D2D /* customView */,
-				16C81577255AD37200E502B4 /* MultiWSProcess */,
-				160D5EFF25418CFA00405181 /* shortcut */,
-				16B319C32539EAD500705F8E /* collectionView */,
-				16F78656252C9877006613AD /* CustomCollectionViewLayoutPod */,
-				165647D52529CA9D00A7AF0D /* CustomCollectionViewLayout */,
-				16B0297424CC705D00E99FB3 /* rotation */,
-				168CF9BA247BEE5F00DF2627 /* progressView */,
-				16D42ABC243B6BF700D254E7 /* SQLite */,
-				167D427E230C31F00077E43D /* customTransition */,
-				9629E14022D221A9008577BB /* ComplexTableView2 */,
-				96101D2C22C77B5F00EF63FF /* layer */,
-				96D679BE22BE660300D7DDD3 /* ComplexTableView */,
-				96D679B922BE5CCE00D7DDD3 /* home */,
-				160BAD2421C14D8800388B5D /* files */,
+				96D679B922BE5CCE00D7DDD3 /* menu */,
 			);
 			path = scenes;
 			sourceTree = "<group>";
@@ -252,6 +237,56 @@
 				163BF9CC25F27AE800F3C248 /* InfiniteScrollViewController.swift */,
 			);
 			path = "infinite-slider";
+			sourceTree = "<group>";
+		};
+		163BF9E325F400B500F3C248 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				168CF9BA247BEE5F00DF2627 /* progressView */,
+				167D427E230C31F00077E43D /* customTransition */,
+				9629E14022D221A9008577BB /* ComplexTableView2 */,
+				96101D2C22C77B5F00EF63FF /* layer */,
+				96D679BE22BE660300D7DDD3 /* ComplexTableView */,
+				16B319C32539EAD500705F8E /* collectionView */,
+				16F78656252C9877006613AD /* CustomCollectionViewLayoutPod */,
+				165647D52529CA9D00A7AF0D /* CustomCollectionViewLayout */,
+				16B0297424CC705D00E99FB3 /* rotation */,
+				167170A22566A58400D96D2D /* customView */,
+				163BF9CB25F27AD600F3C248 /* infinite-slider */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		163BF9E425F400BB00F3C248 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		163BF9E525F400C200F3C248 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		163BF9E625F400CD00F3C248 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		163BF9E725F400D200F3C248 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				160BAD2421C14D8800388B5D /* files */,
+				16D42ABC243B6BF700D254E7 /* SQLite */,
+				16C81577255AD37200E502B4 /* MultiWSProcess */,
+				160D5EFF25418CFA00405181 /* shortcut */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		165647D52529CA9D00A7AF0D /* CustomCollectionViewLayout */ = {
@@ -323,15 +358,6 @@
 				168CF9BC247BEE7500DF2627 /* ProgressViewController.xib */,
 			);
 			path = progressView;
-			sourceTree = "<group>";
-		};
-		169B4E2925EFDD650074DFA5 /* animation */ = {
-			isa = PBXGroup;
-			children = (
-				169B4E2A25EFDD7C0074DFA5 /* AnimationViewController.swift */,
-				169B4E2B25EFDD7C0074DFA5 /* AnimationViewController.xib */,
-			);
-			path = animation;
 			sourceTree = "<group>";
 		};
 		16B0297424CC705D00E99FB3 /* rotation */ = {
@@ -473,13 +499,13 @@
 			path = datasource;
 			sourceTree = "<group>";
 		};
-		96D679B922BE5CCE00D7DDD3 /* home */ = {
+		96D679B922BE5CCE00D7DDD3 /* menu */ = {
 			isa = PBXGroup;
 			children = (
-				96D679BA22BE5CDF00D7DDD3 /* HomeViewController.swift */,
-				96D679BB22BE5CDF00D7DDD3 /* HomeViewController.xib */,
+				96D679BA22BE5CDF00D7DDD3 /* MenuViewController.swift */,
+				96D679BB22BE5CDF00D7DDD3 /* MenuViewController.xib */,
 			);
-			path = home;
+			path = menu;
 			sourceTree = "<group>";
 		};
 		96D679BE22BE660300D7DDD3 /* ComplexTableView */ = {
@@ -596,7 +622,6 @@
 				96D679CC22BE6B7300D7DDD3 /* SquareCollectionViewCell.xib in Resources */,
 				96D679C222BE661B00D7DDD3 /* ComplexTableViewViewController.xib in Resources */,
 				16D42AC0243B6C0900D254E7 /* SQLLiteViewController.xib in Resources */,
-				169B4E2D25EFDD7C0074DFA5 /* AnimationViewController.xib in Resources */,
 				16B319C72539EAE700705F8E /* CoverflowViewController.xib in Resources */,
 				16B0297824CC707900E99FB3 /* RotationViewController.xib in Resources */,
 				96D679C522BE68F400D7DDD3 /* ContainerCell.xib in Resources */,
@@ -606,7 +631,7 @@
 				160BAD1721C14C9E00388B5D /* Main.storyboard in Resources */,
 				167D4286230C321F0077E43D /* CustomTransitionDestinationViewController.xib in Resources */,
 				96D679D022BE902900D7DDD3 /* CircleCollectionViewCell.xib in Resources */,
-				96D679BD22BE5CDF00D7DDD3 /* HomeViewController.xib in Resources */,
+				96D679BD22BE5CDF00D7DDD3 /* MenuViewController.xib in Resources */,
 				167170A02566A57B00D96D2D /* CustomViewViewController.xib in Resources */,
 				96101D3022C77B7700EF63FF /* LayerViewController.xib in Resources */,
 				168CF9BE247BEE7500DF2627 /* ProgressViewController.xib in Resources */,
@@ -671,7 +696,6 @@
 				96D679C822BE6AD500D7DDD3 /* HorizontalDataSource.swift in Sources */,
 				160BAD2621C14D9200388B5D /* FileManagerViewController.swift in Sources */,
 				9629E15622D2302D008577BB /* SerieDataSource.swift in Sources */,
-				169B4E2C25EFDD7C0074DFA5 /* AnimationViewController.swift in Sources */,
 				160D5F0425418D1300405181 /* ShortcutViewController.swift in Sources */,
 				167D4281230C32060077E43D /* CustomTransitionViewController.swift in Sources */,
 				167D4289230C34810077E43D /* AnimationController.swift in Sources */,
@@ -698,7 +722,7 @@
 				160BAD1421C14C9E00388B5D /* ViewController.swift in Sources */,
 				165647DD2529CB1200A7AF0D /* SquareCollectionViewCellX.swift in Sources */,
 				160BAD1221C14C9E00388B5D /* AppDelegate.swift in Sources */,
-				96D679BC22BE5CDF00D7DDD3 /* HomeViewController.swift in Sources */,
+				96D679BC22BE5CDF00D7DDD3 /* MenuViewController.swift in Sources */,
 				16F1A3D425E1443B007B5882 /* Sample+Extension.swift in Sources */,
 				16C815BA255D380500E502B4 /* AsyncOperation.swift in Sources */,
 				16F1A3E025E1459D007B5882 /* AVAudioEngineViewController.swift in Sources */,

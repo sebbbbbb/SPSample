@@ -27,6 +27,13 @@ class Datasource: NSObject, UITableViewDataSource, UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    UIApplication.topNavigationController().pushViewController(viewModel[indexPath.row].type.init(), animated: true)
+    
+    let targetVCType = viewModel[indexPath.row].type
+    if targetVCType == MenuViewController.self {
+      let menuType = MenuViewController.MenuType(string: viewModel[indexPath.row].name)
+      UIApplication.topNavigationController().pushViewController(MenuViewController(type: menuType), animated: true)
+    } else {
+      UIApplication.topNavigationController().pushViewController(viewModel[indexPath.row].type.init(), animated: true)
+    }
   }
 }
